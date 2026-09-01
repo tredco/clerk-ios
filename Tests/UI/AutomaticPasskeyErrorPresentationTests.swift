@@ -11,11 +11,25 @@ struct AutomaticPasskeyErrorPresentationTests {
   func errorsBeforeFirstFactorAttemptAreNotPresented(
     _ stage: PasskeyAuthenticationFailure.Stage
   ) {
-    #expect(!AuthStartView.shouldPresentAutomaticPasskeyError(at: stage))
+    #expect(!AuthStartView.shouldPresentPasskeyError(at: stage, isUserInitiated: false))
   }
 
   @Test
   func firstFactorAttemptErrorIsPresented() {
-    #expect(AuthStartView.shouldPresentAutomaticPasskeyError(at: .attemptingFirstFactor))
+    #expect(AuthStartView.shouldPresentPasskeyError(
+      at: .attemptingFirstFactor,
+      isUserInitiated: false
+    ))
+  }
+
+  @Test(arguments: [
+    PasskeyAuthenticationFailure.Stage.preparingFirstFactor,
+    .requestingAuthorization,
+    .attemptingFirstFactor,
+  ])
+  func userInitiatedErrorsArePresented(
+    _ stage: PasskeyAuthenticationFailure.Stage
+  ) {
+    #expect(AuthStartView.shouldPresentPasskeyError(at: stage, isUserInitiated: true))
   }
 }

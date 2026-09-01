@@ -90,6 +90,28 @@ struct AuthStartView: View {
     passkeySignInIsAvailable(environment: clerk.environment)
   }
 
+  var shouldShowPasskeySignInButton: Bool {
+    #if os(iOS) && !targetEnvironment(macCatalyst)
+    Self.shouldShowPasskeySignInButton(
+      environment: clerk.environment,
+      mode: authState.mode,
+      lockedInitialIdentifierIsActive: lockedInitialIdentifierIsActive
+    )
+    #else
+    false
+    #endif
+  }
+
+  static func shouldShowPasskeySignInButton(
+    environment: Clerk.Environment?,
+    mode: AuthView.Mode,
+    lockedInitialIdentifierIsActive: Bool
+  ) -> Bool {
+    guard mode != .signUp, !lockedInitialIdentifierIsActive else { return false }
+    return environment?.passkeyFirstFactorIsEnabled == true &&
+      environment?.userSettings.passkeySettings?.showSignInButton == true
+  }
+
   func passkeySignInIsAvailable(environment: Clerk.Environment?) -> Bool {
     switch authState.mode {
     case .signIn, .signInOrUp:
@@ -178,7 +200,7 @@ struct AuthStartView: View {
   }
 
   private var hasAlternativeAuthMethods: Bool {
-    hasSocialProviders || shouldShowBiometricSignIn
+    shouldShowPasskeySignInButton || hasSocialProviders || shouldShowBiometricSignIn
   }
 
   // MARK: - Display Strings
@@ -473,6 +495,10 @@ extension AuthStartView {
 
   private var alternativeAuthMethodsSection: some View {
     VStack(spacing: 16) {
+      if shouldShowPasskeySignInButton {
+        passkeySignInButton
+      }
+
       if shouldShowBiometricSignIn {
         biometricSignInButton
       }
@@ -481,6 +507,21 @@ extension AuthStartView {
         socialButtonsSection
       }
     }
+  }
+
+  private var passkeySignInButton: some View {
+    AsyncButton {
+      await signInWithPasskeyButton()
+    } label: { isRunning in
+      StrategyOptionButton(
+        iconName: "icon-fingerprint",
+        text: "Sign in with your passkey"
+      )
+      .overlayProgressView(isActive: isRunning)
+    }
+    .buttonStyle(.secondary())
+    .accessibilityIdentifier(ClerkAccessibilityIdentifiers.Auth.Start.passkeySignInButton)
+    .simultaneousGesture(TapGesture())
   }
 
   private var socialButtonsSection: some View {
@@ -581,40 +622,51 @@ extension AuthStartView {
     }
   }
 
-  private func createPasskeySignIn() async -> SignIn? {
+  private func createPasskeySignIn(presentsErrors: Bool = false) async -> SignIn? {
     do {
       return try await clerk.auth.createPasskeySignIn()
     } catch {
       if Task.isCancelled || error.isCancellationError { return nil }
       guard navigation.path.isEmpty else { return nil }
 
+      if presentsErrors {
+        generalError = error
+      }
       ClerkLogger.error("Failed to create passkey sign-in", error: error)
       return nil
     }
   }
 
-  /// Presents an actionable failure from the automatic passkey sign-in.
+  /// Presents an actionable failure from a passkey sign-in.
   ///
   /// The automatic modal and the AutoFill fallback both start without user intent, so
   /// failures from stages before credential selection and authorization ceremony failures
   /// are logged instead of presented. Other errors, such as the server rejecting a
   /// credential the user selected, remain actionable and are presented.
-  private func presentAutomaticPasskeyError(_ failure: PasskeyAuthenticationFailure) {
-    guard Self.shouldPresentAutomaticPasskeyError(at: failure.stage) else { return }
+  private func presentPasskeyError(
+    _ failure: PasskeyAuthenticationFailure,
+    isUserInitiated: Bool
+  ) {
+    guard Self.shouldPresentPasskeyError(
+      at: failure.stage,
+      isUserInitiated: isUserInitiated
+    ) else { return }
     generalError = failure.underlyingError
   }
 
-  static func shouldPresentAutomaticPasskeyError(
-    at stage: PasskeyAuthenticationFailure.Stage
+  static func shouldPresentPasskeyError(
+    at stage: PasskeyAuthenticationFailure.Stage,
+    isUserInitiated: Bool
   ) -> Bool {
-    stage == .attemptingFirstFactor
+    isUserInitiated || stage == .attemptingFirstFactor
   }
 
   @discardableResult
   private func authenticateWithPasskey(
     signIn: SignIn,
     autofill: Bool,
-    preferImmediatelyAvailableCredentials: Bool
+    preferImmediatelyAvailableCredentials: Bool,
+    isUserInitiated: Bool = false
   ) async -> PasskeySignInResult {
     do {
       let signIn = try await signIn.authenticateWithPasskeyWithFailureContext(
@@ -633,7 +685,7 @@ extension AuthStartView {
       if underlyingError.isUserCancelledError { return .continueWithAutofill }
       guard navigation.path.isEmpty else { return .stopped }
 
-      presentAutomaticPasskeyError(error)
+      presentPasskeyError(error, isUserInitiated: isUserInitiated)
       if autofill {
         ClerkLogger.error("Failed to authenticate with passkey autofill", error: underlyingError)
       } else {
@@ -642,6 +694,28 @@ extension AuthStartView {
       // Keep iOS text-field AutoFill armed after a modal error so users can
       // pick another passkey without a second modal.
       return autofill ? .stopped : .continueWithAutofill
+    }
+  }
+
+  private func signInWithPasskeyButton() async {
+    automaticPasskeySignInHasStarted = true
+    cancelAutomaticPasskeySignIn()
+    dismissKeyboard()
+
+    guard let signIn = await createPasskeySignIn(presentsErrors: true) else {
+      restartAutomaticPasskeySignInIfNeeded()
+      return
+    }
+
+    let result = await authenticateWithPasskey(
+      signIn: signIn,
+      autofill: false,
+      preferImmediatelyAvailableCredentials: false,
+      isUserInitiated: true
+    )
+    guard case .completed = result else {
+      restartAutomaticPasskeySignInIfNeeded()
+      return
     }
   }
 

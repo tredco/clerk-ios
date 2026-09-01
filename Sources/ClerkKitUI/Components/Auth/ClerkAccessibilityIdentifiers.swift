@@ -85,6 +85,7 @@ enum ClerkAccessibilityIdentifiers {
       static let identifier = "clerk.auth.start.identifier"
       static let phoneNumber = "clerk.auth.start.phoneNumber"
       static let continueButton = "clerk.auth.start.continue"
+      static let passkeySignInButton = "clerk.auth.start.passkeySignIn"
       static let biometricSignInButton = "clerk.auth.start.biometricSignIn"
       static let identifierSwitcherButton = "clerk.auth.start.identifierSwitcher"
     }
