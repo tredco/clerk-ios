@@ -30,10 +30,10 @@ struct UserProfilePasskeyRow: View {
 
         VStack(alignment: .leading, spacing: 0) {
           Group {
-            Text("Created: \(passkey.createdAt.relativeNamedFormat)", bundle: .module)
+            Text("Created: \(passkey.createdAt.relativeNamedFormat(locale: locale))", bundle: .module)
 
             if let lastUsedAt = passkey.lastUsedAt {
-              Text("Last used: \(lastUsedAt.relativeNamedFormat)", bundle: .module)
+              Text("Last used: \(lastUsedAt.relativeNamedFormat(locale: locale))", bundle: .module)
             }
           }
           .font(theme.fonts.subheadline)

@@ -23,7 +23,7 @@ extension ClerkPhoneNumberField {
     }
 
     init() {
-      let resolvedDefaultCountry = Self.defaultCountry(using: utility) ?? utility.allCountries.first
+      let resolvedDefaultCountry = Self.defaultCountry(using: utility) ?? utility.allCountries().first
 
       guard let defaultCountry = resolvedDefaultCountry else {
         preconditionFailure("PhoneNumberKit returned no supported countries")
@@ -50,14 +50,15 @@ extension ClerkPhoneNumberField {
       .first
     }
 
-    var allCountriesExceptDefault: [ClerkPhoneCountry] {
-      utility.allCountries.filter { country in
+    func allCountriesExceptDefault(locale: Locale) -> [ClerkPhoneCountry] {
+      utility.allCountries(locale: locale).filter { country in
         country.code != defaultCountry.code
       }
     }
 
-    func stringForCountry(_ country: ClerkPhoneCountry) -> String {
-      "\(country.flag) \(country.name) \(country.prefix)"
+    func stringForCountry(_ country: ClerkPhoneCountry, locale: Locale) -> String {
+      let localizedCountry = ClerkPhoneCountry(for: country.code, with: utility, locale: locale) ?? country
+      return "\(localizedCountry.flag) \(localizedCountry.name) \(localizedCountry.prefix)"
     }
 
     var exampleNumber: String {
@@ -98,6 +99,7 @@ extension ClerkPhoneNumberField {
 
 struct ClerkPhoneNumberField: View {
   @Environment(\.clerkTheme) private var theme
+  @Environment(\.locale) private var locale
   @State private var phoneNumberModel = PhoneNumberModel()
   @State private var reservedHeight: CGFloat?
   @State var displayText = ""
@@ -149,18 +151,18 @@ struct ClerkPhoneNumberField: View {
           phoneNumberModel.currentCountry = phoneNumberModel.defaultCountry
           textDidUpdate(text: displayText)
         } label: {
-          Text(phoneNumberModel.stringForCountry(phoneNumberModel.defaultCountry))
+          Text(phoneNumberModel.stringForCountry(phoneNumberModel.defaultCountry, locale: locale))
             .lineLimit(1)
         }
       }
 
       Section("International") {
-        ForEach(phoneNumberModel.allCountriesExceptDefault, id: \.code) { country in
+        ForEach(phoneNumberModel.allCountriesExceptDefault(locale: locale), id: \.code) { country in
           Button {
             phoneNumberModel.currentCountry = country
             textDidUpdate(text: displayText)
           } label: {
-            Text(phoneNumberModel.stringForCountry(country))
+            Text(phoneNumberModel.stringForCountry(country, locale: locale))
               .lineLimit(1)
           }
         }

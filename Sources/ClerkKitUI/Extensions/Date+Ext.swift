@@ -8,9 +8,10 @@
 import Foundation
 
 extension Date {
-  var relativeNamedFormat: String {
+  func relativeNamedFormat(locale: Locale) -> String {
     var formatStyle = Date.RelativeFormatStyle()
     formatStyle.presentation = .named
+    formatStyle.locale = locale
     return formatted(formatStyle)
   }
 }

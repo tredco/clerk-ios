@@ -14,7 +14,7 @@ struct ClerkPhoneCountry: Equatable, Hashable {
   let name: String
   let prefix: String
 
-  init?(for countryCode: String, with utility: PhoneNumberUtility) {
+  init?(for countryCode: String, with utility: PhoneNumberUtility, locale: Locale = .current) {
     let normalizedCode = countryCode.uppercased()
     let flagBase = UnicodeScalar("🇦").value - UnicodeScalar("A").value
     let fallbackLocale = Locale(identifier: "en_US_POSIX")
@@ -22,7 +22,7 @@ struct ClerkPhoneCountry: Equatable, Hashable {
     guard
       normalizedCode.count == 2,
       normalizedCode.unicodeScalars.allSatisfy(CharacterSet.letters.contains),
-      let name = Locale.current.localizedString(forRegionCode: normalizedCode)
+      let name = locale.localizedString(forRegionCode: normalizedCode)
       ?? fallbackLocale.localizedString(forRegionCode: normalizedCode),
       let prefix = utility.countryCode(for: normalizedCode)?.description
     else {
@@ -45,11 +45,10 @@ struct ClerkPhoneCountry: Equatable, Hashable {
 }
 
 extension PhoneNumberKit.PhoneNumberUtility {
-  var allCountries: [ClerkPhoneCountry] {
-    self
-      .allCountries()
+  func allCountries(locale: Locale = .current) -> [ClerkPhoneCountry] {
+    allCountries()
       .compactMap {
-        ClerkPhoneCountry(for: $0, with: self)
+        ClerkPhoneCountry(for: $0, with: self, locale: locale)
       }
       .sorted(by: {
         $0.name.localizedCaseInsensitiveCompare($1.name) == .orderedAscending

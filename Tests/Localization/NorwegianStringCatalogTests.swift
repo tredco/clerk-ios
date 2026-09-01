@@ -58,18 +58,53 @@ struct NorwegianStringCatalogTests {
   }
 
   @Test
-  func localizedDeleteConfirmationUsesTheSameRequiredWord() throws {
+  func localizedDeleteConfirmationUsesTheDisplayedRequiredWord() throws {
     let catalog = try loadCatalog("Sources/ClerkKitUI/Resources/Localizable.xcstrings")
-    let requiredWord = catalog.strings["DELETE"]?.localizations?["nb"]?.stringUnit.value
-    let instruction = catalog.strings["Type \"DELETE\" to continue"]?
-      .localizations?["nb"]?.stringUnit.value
+    let requiredEntry = try #require(catalog.strings["DELETE"])
+    let instructionEntry = try #require(catalog.strings["Type \"DELETE\" to continue"])
+    var requiredWords = ["en": "DELETE"]
+    var instructions = ["en": "Type \"DELETE\" to continue"]
 
-    // This must remain language-neutral. ClerkKitUI 1.5.1 validates the input
-    // without passing the SwiftUI environment locale, so translating the
-    // required word can make the displayed instruction and validation differ.
-    #expect(requiredWord == "DELETE")
-    #expect(instruction?.contains("DELETE") == true)
-    #expect(DeleteAccountConfirmationInput.requiredValue == "DELETE")
+    for (identifier, localization) in requiredEntry.localizations ?? [:] {
+      requiredWords[identifier] = localization.stringUnit.value
+    }
+    for (identifier, localization) in instructionEntry.localizations ?? [:] {
+      instructions[identifier] = localization.stringUnit.value
+    }
+
+    for (identifier, requiredWord) in requiredWords {
+      let locale = Locale(identifier: identifier)
+      #expect(instructions[identifier]?.contains(requiredWord) == true, Comment(rawValue: identifier))
+      // SwiftPM copies xcstrings as source data on macOS. Xcode compiles them
+      // into locale bundles on Apple platform test destinations, where the
+      // runtime lookup can be verified directly.
+      if DeleteAccountConfirmationInput.localizationBundle.url(
+        forResource: "Localizable",
+        withExtension: "xcstrings"
+      ) == nil {
+        #expect(
+          DeleteAccountConfirmationInput.requiredValue(locale: locale) == requiredWord,
+          Comment(rawValue: identifier)
+        )
+      }
+    }
+
+    #expect(requiredWords["nb"] == "DELETE")
+  }
+
+  @Test
+  func catalogGuardRecognizesFoundationPlaceholderAndLegalTargetVariants() throws {
+    let formatVariants = "%@ %02d %u %1$lu %lld %.2f %%"
+    #expect(
+      try placeholders(in: formatVariants)
+        == ["%@", "%02d", "%u", "%1$lu", "%lld", "%.2f", "%%"].sorted()
+    )
+
+    let legalText = "[Terms](LegalConsentView://terms-and_conditions/v2?from=sign_up)"
+    #expect(
+      try legalConsentTargets(in: legalText)
+        == ["LegalConsentView://terms-and_conditions/v2?from=sign_up"]
+    )
   }
 
   private func loadCatalog(_ relativePath: String) throws -> Catalog {
@@ -82,11 +117,14 @@ struct NorwegianStringCatalogTests {
   }
 
   private func placeholders(in value: String) throws -> [String] {
-    try matches(pattern: #"%(?:\d+\$)?(?:@|lld|ld|d|f|s)"#, in: value).sorted()
+    try matches(
+      pattern: #"%(?:\d+\$)?[-+# 0',(]*(?:\*|\d+)?(?:\.(?:\*|\d+))?(?:hh|h|ll|l|q|L|z|t|j)?[@a-zA-Z%]"#,
+      in: value
+    ).sorted()
   }
 
   private func legalConsentTargets(in value: String) throws -> [String] {
-    try matches(pattern: #"LegalConsentView://[a-z]+"#, in: value).sorted()
+    try matches(pattern: #"LegalConsentView://[^)\s]+"#, in: value).sorted()
   }
 
   private func matches(pattern: String, in value: String) throws -> [String] {

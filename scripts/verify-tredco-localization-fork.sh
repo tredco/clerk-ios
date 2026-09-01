@@ -25,11 +25,17 @@ while IFS= read -r changed_path; do
     scripts/verify-tredco-localization-fork.sh | \
     Sources/ClerkKit/Resources/Localizable.xcstrings | \
     Sources/ClerkKitUI/Resources/Localizable.xcstrings | \
+    Sources/ClerkKitUI/Common/ClerkPhoneNumberField.swift | \
     Sources/ClerkKitUI/Components/UserProfile/UserProfileDeleteAccountConfirmationView.swift | \
+    Sources/ClerkKitUI/Components/UserProfile/UserProfileDeviceRow.swift | \
+    Sources/ClerkKitUI/Components/UserProfile/UserProfilePasskeyRow.swift | \
     Sources/ClerkKitUI/Components/Organization/OrganizationPersonalAccountRow.swift | \
     Sources/ClerkKitUI/Components/Organization/OrganizationSwitcherLabel.swift | \
     Sources/ClerkKitUI/Components/Organization/OrganizationAccountListSections.swift | \
-    Tests/Localization/NorwegianStringCatalogTests.swift)
+    Sources/ClerkKitUI/Extensions/Date+Ext.swift | \
+    Sources/ClerkKitUI/Extensions/PhoneNumber+Ext.swift | \
+    Tests/Localization/NorwegianStringCatalogTests.swift | \
+    Tests/UI/ClerkPhoneNumberFieldTests.swift)
       ;;
     *)
       unexpected_paths+=("$changed_path")

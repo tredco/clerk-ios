@@ -1,6 +1,6 @@
 # Tredco Norwegian localization
 
-This branch adds Norwegian Bokmål (`nb`) to the two Clerk string catalogs. Its source changes are limited to locale propagation inside ClerkKitUI and a locale-independent account-deletion confirmation. It does not change authentication, session, storage, or network behavior.
+This branch adds Norwegian Bokmål (`nb`) to the two Clerk string catalogs. Its source changes are limited to locale propagation inside ClerkKitUI, including runtime-formatted country names and relative dates. It does not change authentication, session, storage, or network behavior.
 
 ## Upstream base
 
@@ -21,14 +21,15 @@ The localized catalogs are:
 The localization support patches are:
 
 - pass the SwiftUI environment locale to five organization-label lookups that otherwise use the device locale;
-- validate account deletion against Clerk's documented literal `DELETE` so the selected app locale and device locale cannot disagree.
+- format phone-country names and device/passkey relative dates with the SwiftUI environment locale;
+- validate account deletion with the same localized `DELETE` value shown by the selected app locale.
 
 ## Updating Clerk
 
 1. Fetch the new Clerk tag from `upstream` and create a new `tredco/nb-NO-<version>` branch from that tag.
 2. Replay the Norwegian localization commits. Resolve catalog conflicts by keeping all upstream keys and languages, then adding the `nb` string unit beside them. Recheck whether upstream still needs the locale-propagation and deletion-confirmation patches before carrying them forward.
 3. Translate every new source key into Norwegian Bokmål. Keep printf/Swift placeholders such as `%@` and `%lld` unchanged, including their count. Keep `LegalConsentView://` link targets unchanged.
-4. Run `swift test --filter NorwegianStringCatalogTests`. The completeness test fails if either catalog has a key without an `nb` translation or if placeholders differ. Pushing a `tredco/nb-NO-*` branch also runs the fork's full shared checks workflow.
+4. Run `swift test --filter NorwegianStringCatalogTests`. The completeness test fails if either catalog has a key without an `nb` translation, if placeholders or legal-link targets differ, or if a deletion instruction disagrees with its accepted localized value. Pushing a `tredco/nb-NO-*` branch also runs the fork's full shared checks workflow.
 5. Review the changed screens on an iOS simulator set to Norwegian Bokmål. At minimum, cover sign-in, verification, password recovery, account security, profile editing, and account deletion.
 6. Pin Tredco's Swift package dependency to the reviewed fork commit and rebuild the native app.
 
@@ -36,4 +37,4 @@ Do not copy translations from Clerk's JavaScript catalog without review. It is a
 
 ### Translation exception: `DELETE`
 
-Keep the `DELETE` confirmation value and the word in `Type "DELETE" to continue` untranslated. ClerkKitUI 1.5.1 originally validated the entered value with a device-locale bundle lookup, which could disagree with Tredco's selected app locale. The fork validates against the literal `DELETE`, and the catalog test locks the instruction and required value together until upstream makes the validation locale-aware.
+Keep the Norwegian `DELETE` confirmation value and the word in `Type "DELETE" to continue` untranslated. Other Clerk locales retain their existing translated required words. ClerkKitUI 1.5.1 originally validated the entered value with a device-locale bundle lookup, which could disagree with Tredco's selected app locale. The fork passes the SwiftUI environment locale to both display and validation, and the catalog test locks every language's instruction and accepted value together.

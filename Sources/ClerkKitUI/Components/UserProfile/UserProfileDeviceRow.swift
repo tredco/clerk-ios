@@ -11,6 +11,7 @@ import SwiftUI
 struct UserProfileDeviceRow: View {
   @Environment(Clerk.self) private var clerk
   @Environment(\.clerkTheme) private var theme
+  @Environment(\.locale) private var locale
 
   let session: Session
 
@@ -45,7 +46,7 @@ struct UserProfileDeviceRow: View {
                 Group {
                   Text(verbatim: activity.browserFormatted)
                   Text(verbatim: activity.ipAndLocationFormatted)
-                  Text(session.lastActiveAt.relativeNamedFormat)
+                  Text(session.lastActiveAt.relativeNamedFormat(locale: locale))
                 }
                 .font(theme.fonts.subheadline)
                 .foregroundStyle(theme.colors.mutedForeground)
