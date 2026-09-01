@@ -161,6 +161,121 @@ struct AuthStartOperationTests {
     #expect(!didPresentError)
     #expect(!didRestartAutomaticSignIn)
   }
+
+  @Test
+  func delayedEnvironmentRefreshCannotRestartAutomaticSignInDuringExplicitIntent() async {
+    let operation = AuthStartOperation()
+    let refreshGate = AuthStartOperationGate()
+    var passkeySignInState = AuthStartPasskeySignInState()
+    let initialRestartID = passkeySignInState.automaticSignInRestartID
+
+    let refreshTask = Task { @MainActor in
+      await refreshGate.suspend()
+      passkeySignInState.restartAutomaticSignInAfterEnvironmentRefreshIfNeeded(
+        isEnabled: true,
+        taskIsActive: false
+      )
+    }
+
+    await refreshGate.waitUntilSuspended()
+    let operationToken = operation.begin()
+    passkeySignInState.beginExplicitOperation(operationToken)
+
+    #expect(!passkeySignInState.automaticSignInCanStart)
+
+    await refreshGate.resume()
+    await refreshTask.value
+
+    #expect(passkeySignInState.automaticSignInRestartID == initialRestartID)
+    #expect(!passkeySignInState.automaticSignInCanStart)
+
+    let didFinishExplicitOperation = passkeySignInState.finishExplicitOperation(
+      operationToken,
+      shouldRestartAutomaticSignIn: false,
+      automaticSignInIsEnabled: true
+    )
+    #expect(didFinishExplicitOperation)
+    #expect(!passkeySignInState.automaticSignInCanStart)
+    #expect(passkeySignInState.automaticSignInRestartID == initialRestartID)
+
+    passkeySignInState.restartAutomaticSignInAfterEnvironmentRefreshIfNeeded(
+      isEnabled: true,
+      taskIsActive: false
+    )
+
+    #expect(!passkeySignInState.automaticSignInCanStart)
+    #expect(passkeySignInState.automaticSignInRestartID == initialRestartID)
+
+    passkeySignInState.rearmAutomaticSignInAfterAppearanceIfNeeded(isEnabled: true)
+
+    #expect(passkeySignInState.automaticSignInCanStart)
+    #expect(passkeySignInState.automaticSignInRestartID == initialRestartID + 1)
+  }
+
+  @Test
+  func ownedExplicitTerminalCanRearmAutomaticSignIn() {
+    let operation = AuthStartOperation()
+    var passkeySignInState = AuthStartPasskeySignInState()
+    let initialRestartID = passkeySignInState.automaticSignInRestartID
+    let operationToken = operation.begin()
+    passkeySignInState.beginExplicitOperation(operationToken)
+
+    let didFinishExplicitOperation = passkeySignInState.finishExplicitOperation(
+      operationToken,
+      shouldRestartAutomaticSignIn: true,
+      automaticSignInIsEnabled: true
+    )
+    #expect(didFinishExplicitOperation)
+    #expect(passkeySignInState.automaticSignInCanStart)
+    #expect(passkeySignInState.automaticSignInRestartID == initialRestartID + 1)
+  }
+
+  @Test
+  func ownedExplicitTerminalRearmsBeforeEnvironmentEnablesAutomaticSignIn() {
+    let operation = AuthStartOperation()
+    var passkeySignInState = AuthStartPasskeySignInState()
+    let initialRestartID = passkeySignInState.automaticSignInRestartID
+    let operationToken = operation.begin()
+    passkeySignInState.beginExplicitOperation(operationToken)
+
+    let didFinishExplicitOperation = passkeySignInState.finishExplicitOperation(
+      operationToken,
+      shouldRestartAutomaticSignIn: true,
+      automaticSignInIsEnabled: false
+    )
+
+    #expect(didFinishExplicitOperation)
+    #expect(passkeySignInState.automaticSignInCanStart)
+    #expect(passkeySignInState.automaticSignInRestartID == initialRestartID)
+  }
+
+  @Test
+  func supersededExplicitTerminalCannotRearmAutomaticSignIn() {
+    let operation = AuthStartOperation()
+    var passkeySignInState = AuthStartPasskeySignInState()
+    let initialRestartID = passkeySignInState.automaticSignInRestartID
+    let olderToken = operation.begin()
+    passkeySignInState.beginExplicitOperation(olderToken)
+    let newerToken = operation.begin()
+    passkeySignInState.beginExplicitOperation(newerToken)
+
+    let olderOperationDidFinish = passkeySignInState.finishExplicitOperation(
+      olderToken,
+      shouldRestartAutomaticSignIn: true,
+      automaticSignInIsEnabled: true
+    )
+    #expect(!olderOperationDidFinish)
+    #expect(!passkeySignInState.automaticSignInCanStart)
+    #expect(passkeySignInState.automaticSignInRestartID == initialRestartID)
+
+    let newerOperationDidFinish = passkeySignInState.finishExplicitOperation(
+      newerToken,
+      shouldRestartAutomaticSignIn: false,
+      automaticSignInIsEnabled: true
+    )
+    #expect(newerOperationDidFinish)
+    #expect(!passkeySignInState.automaticSignInCanStart)
+  }
 }
 
 enum AlternativeAuthIntent: CaseIterable {

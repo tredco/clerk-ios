@@ -62,4 +62,72 @@ final class AuthStartOperation {
   }
 }
 
+struct AuthStartPasskeySignInState {
+  private(set) var automaticSignInRestartID = 0
+  private(set) var automaticSignInHasStarted = false
+  private var automaticSignInIsArmed = true
+  private var explicitOperationToken: AuthStartOperation.Token?
+
+  var automaticSignInCanStart: Bool {
+    automaticSignInIsArmed && explicitOperationToken == nil
+  }
+
+  mutating func beginExplicitOperation(
+    _ operationToken: AuthStartOperation.Token,
+    marksAutomaticSignInStarted: Bool = false
+  ) {
+    explicitOperationToken = operationToken
+    automaticSignInIsArmed = false
+    if marksAutomaticSignInStarted {
+      automaticSignInHasStarted = true
+    }
+  }
+
+  @discardableResult
+  mutating func finishExplicitOperation(
+    _ operationToken: AuthStartOperation.Token,
+    shouldRestartAutomaticSignIn: Bool,
+    automaticSignInIsEnabled: Bool
+  ) -> Bool {
+    guard explicitOperationToken == operationToken else { return false }
+
+    explicitOperationToken = nil
+    if shouldRestartAutomaticSignIn {
+      restartAutomaticSignInIfNeeded(isEnabled: automaticSignInIsEnabled)
+    }
+    return true
+  }
+
+  mutating func cancelExplicitOperation() {
+    explicitOperationToken = nil
+  }
+
+  mutating func markAutomaticSignInStarted() {
+    automaticSignInHasStarted = true
+  }
+
+  mutating func restartAutomaticSignInIfNeeded(isEnabled: Bool) {
+    automaticSignInIsArmed = true
+    guard isEnabled else { return }
+    automaticSignInRestartID += 1
+  }
+
+  mutating func rearmAutomaticSignInAfterAppearanceIfNeeded(isEnabled: Bool) {
+    guard explicitOperationToken == nil, !automaticSignInIsArmed else { return }
+    restartAutomaticSignInIfNeeded(isEnabled: isEnabled)
+  }
+
+  mutating func restartAutomaticSignInAfterEnvironmentRefreshIfNeeded(
+    isEnabled: Bool,
+    taskIsActive: Bool
+  ) {
+    guard automaticSignInCanStart,
+          !automaticSignInHasStarted,
+          !taskIsActive
+    else { return }
+
+    restartAutomaticSignInIfNeeded(isEnabled: isEnabled)
+  }
+}
+
 #endif
