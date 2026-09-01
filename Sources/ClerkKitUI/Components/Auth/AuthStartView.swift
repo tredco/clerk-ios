@@ -28,7 +28,7 @@ struct AuthStartView: View {
   @State private var automaticPasskeySignInTaskGeneration = 0
   @State private var automaticPasskeySignInRestartID = 0
   @State private var automaticPasskeySignInHasStarted = false
-  @State private var interactivePasskeySignInOperation = AuthStartPasskeySignInOperation()
+  @State private var authStartOperation = AuthStartOperation()
   @State private var biometricCredentialAvailability: BiometricCredentialAvailability?
   @State private var biometryDisplayName: BiometryDisplayName?
 
@@ -307,7 +307,7 @@ struct AuthStartView: View {
       }
     }
     .onDisappear {
-      cancelInteractivePasskeySignIn()
+      cancelAuthStartOperation()
     }
     #if os(iOS) && !targetEnvironment(macCatalyst)
     .task(id: passkeySignInTaskID) {
@@ -456,8 +456,8 @@ extension AuthStartView {
   private var continueButton: some View {
     @Bindable var authState = authState
 
-    return AsyncButton {
-      await startAuth()
+    return AsyncButton(onStart: beginIdentifierAuthStartOperation) { operationToken in
+      await startAuth(operationToken: operationToken)
     } label: { isRunning in
       ContinueButtonLabelView(isActive: isRunning)
     }
@@ -469,7 +469,7 @@ extension AuthStartView {
 
   private var identifierSwitcherButton: some View {
     Button {
-      cancelInteractivePasskeySignIn()
+      cancelAuthStartOperation()
       cancelAutomaticPasskeySignIn()
       withAnimation(.default.speed(2)) {
         authState.authStartPhoneNumberFieldIsActive.toggle()
@@ -488,11 +488,10 @@ extension AuthStartView {
   private var biometricSignInButton: some View {
     if let biometryDisplayName {
       BiometricSignInButton(
-        biometryDisplayName: biometryDisplayName
-      ) {
-        cancelInteractivePasskeySignIn()
-        cancelAutomaticPasskeySignIn()
-        await signInWithBiometrics()
+        biometryDisplayName: biometryDisplayName,
+        onStart: beginAlternativeAuthStartOperation
+      ) { operationToken in
+        await signInWithBiometrics(operationToken: operationToken)
       }
       .lastUsedAuthBadgeOverlay(lastUsedAuth?.showsBiometricCredentialBadge == true)
       .simultaneousGesture(TapGesture())
@@ -516,8 +515,8 @@ extension AuthStartView {
   }
 
   private var passkeySignInButton: some View {
-    AsyncButton {
-      await signInWithPasskeyButton()
+    AsyncButton(onStart: beginInteractivePasskeySignInOperation) { operationToken in
+      await signInWithPasskeyButton(operationToken: operationToken)
     } label: { isRunning in
       StrategyOptionButton(
         iconName: "icon-fingerprint",
@@ -542,14 +541,13 @@ extension AuthStartView {
             transferable: authState.transferable,
             unsafeMetadata: authState.unsafeMetadata,
             showsTitle: showsTitle,
-            onStart: cancelPasskeySignInsForNewAuthOperation,
-            onSuccess: handleTransferFlowResult,
-            onError: { error in
-              generalError = error
-              restartAutomaticPasskeySignInIfNeeded()
-            },
-            onCancel: restartAutomaticPasskeySignInIfNeeded
-          )
+            onStart: beginAlternativeAuthStartOperation
+          ) { operationToken in
+            await signInWithSocialProvider(
+              provider,
+              operationToken: operationToken
+            )
+          }
           .lastUsedAuthBadgeOverlay(isLastUsed)
           .simultaneousGesture(TapGesture())
         }
@@ -567,19 +565,20 @@ extension AuthStartView {
     case stopped
   }
 
-  func startAuth() async {
-    cancelInteractivePasskeySignIn()
-    cancelAutomaticPasskeySignIn()
-    dismissKeyboard()
+  func startAuth(operationToken: AuthStartOperation.Token) async {
+    await authStartOperation.run(token: operationToken) { operationToken in
+      guard authStartOperation.isCurrent(operationToken) else { return }
 
-    let shouldRestartPasskeySignIn = switch authState.mode {
-    case .signInOrUp: await signIn(withSignUp: true)
-    case .signIn: await signIn(withSignUp: false)
-    case .signUp: await signUp()
-    }
+      let shouldRestartPasskeySignIn = switch authState.mode {
+      case .signInOrUp: await signIn(withSignUp: true, operationToken: operationToken)
+      case .signIn: await signIn(withSignUp: false, operationToken: operationToken)
+      case .signUp: await signUp(operationToken: operationToken)
+      }
 
-    if shouldRestartPasskeySignIn {
-      restartAutomaticPasskeySignInIfNeeded()
+      guard authStartOperation.isCurrent(operationToken) else { return }
+      if shouldRestartPasskeySignIn {
+        restartAutomaticPasskeySignInIfNeeded()
+      }
     }
   }
 
@@ -589,13 +588,25 @@ extension AuthStartView {
     automaticPasskeySignInTask = nil
   }
 
-  private func cancelInteractivePasskeySignIn() {
-    interactivePasskeySignInOperation.cancel()
+  private func cancelAuthStartOperation() {
+    authStartOperation.cancel()
   }
 
-  private func cancelPasskeySignInsForNewAuthOperation() {
-    cancelInteractivePasskeySignIn()
+  private func beginAlternativeAuthStartOperation() -> AuthStartOperation.Token {
+    let operationToken = authStartOperation.begin()
     cancelAutomaticPasskeySignIn()
+    return operationToken
+  }
+
+  private func beginIdentifierAuthStartOperation() -> AuthStartOperation.Token {
+    let operationToken = beginAlternativeAuthStartOperation()
+    dismissKeyboard()
+    return operationToken
+  }
+
+  private func beginInteractivePasskeySignInOperation() -> AuthStartOperation.Token {
+    automaticPasskeySignInHasStarted = true
+    return beginIdentifierAuthStartOperation()
   }
 
   private func restartAutomaticPasskeySignInIfNeeded() {
@@ -608,7 +619,10 @@ extension AuthStartView {
     restartAutomaticPasskeySignInIfNeeded()
   }
 
-  private func signIn(withSignUp: Bool) async -> Bool {
+  private func signIn(
+    withSignUp: Bool,
+    operationToken: AuthStartOperation.Token
+  ) async -> Bool {
     fieldError = nil
 
     do {
@@ -616,12 +630,14 @@ extension AuthStartView {
       storeIdentifierType()
 
       let signIn = try await clerk.auth.signIn(activeIdentifier)
+      guard authStartOperation.isCurrent(operationToken) else { return false }
 
       if signIn.startingFirstFactor?.strategy == .enterpriseSSO {
         let result = try await signIn.authenticateWithEnterpriseSSO(
           transferable: authState.transferable,
           unsafeMetadata: authState.unsafeMetadata
         )
+        guard authStartOperation.isCurrent(operationToken) else { return false }
         handleTransferFlowResult(result)
         return false
       }
@@ -629,8 +645,11 @@ extension AuthStartView {
       navigation.setToStepForStatus(signIn: signIn)
       return signInStatusStaysOnStart(signIn.status)
     } catch {
+      guard authStartOperation.isCurrent(operationToken), !error.isCancellationError else {
+        return false
+      }
       if withSignUp, let clerkApiError = error as? ClerkAPIError, ["form_identifier_not_found", "invitation_account_not_exists"].contains(clerkApiError.code) {
-        return await signUp()
+        return await signUp(operationToken: operationToken)
       } else {
         fieldError = error
         return true
@@ -640,7 +659,7 @@ extension AuthStartView {
 
   private func createPasskeySignIn(
     presentsErrors: Bool = false,
-    operationToken: AuthStartPasskeySignInOperation.Token? = nil
+    operationToken: AuthStartOperation.Token? = nil
   ) async -> SignIn? {
     do {
       return try await clerk.auth.createPasskeySignIn()
@@ -688,7 +707,7 @@ extension AuthStartView {
     autofill: Bool,
     preferImmediatelyAvailableCredentials: Bool,
     isUserInitiated: Bool = false,
-    operationToken: AuthStartPasskeySignInOperation.Token? = nil
+    operationToken: AuthStartOperation.Token? = nil
   ) async -> PasskeySignInResult {
     do {
       let signIn = try await signIn.authenticateWithPasskeyWithFailureContext(
@@ -721,24 +740,20 @@ extension AuthStartView {
     }
   }
 
-  private func signInWithPasskeyButton() async {
-    automaticPasskeySignInHasStarted = true
-    cancelAutomaticPasskeySignIn()
-    dismissKeyboard()
-
-    await interactivePasskeySignInOperation.run { operationToken in
-      guard interactivePasskeySignInOperation.isCurrent(operationToken) else { return }
+  private func signInWithPasskeyButton(operationToken: AuthStartOperation.Token) async {
+    await authStartOperation.run(token: operationToken) { operationToken in
+      guard authStartOperation.isCurrent(operationToken) else { return }
 
       guard let signIn = await createPasskeySignIn(
         presentsErrors: true,
         operationToken: operationToken
       ) else {
-        guard interactivePasskeySignInOperation.isCurrent(operationToken) else { return }
+        guard authStartOperation.isCurrent(operationToken) else { return }
         restartAutomaticPasskeySignInIfNeeded()
         return
       }
 
-      guard interactivePasskeySignInOperation.isCurrent(operationToken) else { return }
+      guard authStartOperation.isCurrent(operationToken) else { return }
 
       let result = await authenticateWithPasskey(
         signIn: signIn,
@@ -747,7 +762,7 @@ extension AuthStartView {
         isUserInitiated: true,
         operationToken: operationToken
       )
-      guard interactivePasskeySignInOperation.isCurrent(operationToken) else { return }
+      guard authStartOperation.isCurrent(operationToken) else { return }
       guard case .completed = result else {
         restartAutomaticPasskeySignInIfNeeded()
         return
@@ -756,11 +771,11 @@ extension AuthStartView {
   }
 
   private func passkeySignInOperationIsCurrent(
-    _ operationToken: AuthStartPasskeySignInOperation.Token?
+    _ operationToken: AuthStartOperation.Token?
   ) -> Bool {
     guard !Task.isCancelled else { return false }
     guard let operationToken else { return true }
-    return interactivePasskeySignInOperation.isCurrent(operationToken)
+    return authStartOperation.isCurrent(operationToken)
   }
 
   #if os(iOS) && !targetEnvironment(macCatalyst)
@@ -801,14 +816,18 @@ extension AuthStartView {
   }
   #endif
 
-  private func signUp() async -> Bool {
+  private func signUp(operationToken: AuthStartOperation.Token) async -> Bool {
     fieldError = nil
 
     do {
       let signUp = try await signUpParams()
+      guard authStartOperation.isCurrent(operationToken) else { return false }
       navigation.setToStepForStatus(signUp: signUp)
       return signUpStatusStaysOnStart(signUp.status)
     } catch {
+      guard authStartOperation.isCurrent(operationToken), !error.isCancellationError else {
+        return false
+      }
       fieldError = error
       return true
     }
@@ -905,26 +924,64 @@ extension AuthStartView {
     }
   }
 
-  private func signInWithBiometrics() async {
-    generalError = nil
+  private func signInWithSocialProvider(
+    _ provider: OAuthProvider,
+    operationToken: AuthStartOperation.Token
+  ) async {
+    await authStartOperation.run(token: operationToken) { operationToken in
+      guard authStartOperation.isCurrent(operationToken) else { return }
 
-    do {
-      let signIn = try await clerk.auth.signInWithBiometrics()
-      guard !Task.isCancelled, navigation.path.isEmpty else { return }
-      navigation.setToStepForStatus(signIn: signIn)
-    } catch {
-      if error.isCancellationError {
-        return
-      }
+      do {
+        let result: TransferFlowResult = if provider == .apple {
+          try await clerk.auth.signInWithApple(
+            transferable: authState.transferable,
+            unsafeMetadata: authState.unsafeMetadata
+          )
+        } else {
+          try await clerk.auth.signInWithOAuth(
+            provider: provider,
+            transferable: authState.transferable,
+            unsafeMetadata: authState.unsafeMetadata
+          )
+        }
 
-      if error.isUserCancelledError {
+        guard authStartOperation.isCurrent(operationToken) else { return }
+        handleTransferFlowResult(result)
+      } catch {
+        guard authStartOperation.isCurrent(operationToken), !error.isCancellationError else {
+          return
+        }
+        if !error.isUserCancelledError {
+          generalError = error
+        }
         restartAutomaticPasskeySignInIfNeeded()
-        return
       }
+    }
+  }
 
-      generalError = error
-      await refreshBiometricCredentialAvailability()
-      restartAutomaticPasskeySignInIfNeeded()
+  private func signInWithBiometrics(operationToken: AuthStartOperation.Token) async {
+    await authStartOperation.run(token: operationToken) { operationToken in
+      guard authStartOperation.isCurrent(operationToken) else { return }
+      generalError = nil
+
+      do {
+        let signIn = try await clerk.auth.signInWithBiometrics()
+        guard authStartOperation.isCurrent(operationToken), navigation.path.isEmpty else { return }
+        navigation.setToStepForStatus(signIn: signIn)
+      } catch {
+        guard authStartOperation.isCurrent(operationToken), !error.isCancellationError else {
+          return
+        }
+        if error.isUserCancelledError {
+          restartAutomaticPasskeySignInIfNeeded()
+          return
+        }
+
+        generalError = error
+        await refreshBiometricCredentialAvailability()
+        guard authStartOperation.isCurrent(operationToken) else { return }
+        restartAutomaticPasskeySignInIfNeeded()
+      }
     }
   }
 }

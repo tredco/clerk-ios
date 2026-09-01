@@ -1,5 +1,5 @@
 //
-//  AuthStartPasskeySignInOperation.swift
+//  AuthStartOperation.swift
 //  Clerk
 //
 
@@ -8,7 +8,7 @@
 import Foundation
 
 @MainActor
-final class AuthStartPasskeySignInOperation {
+final class AuthStartOperation {
   struct Token: Equatable {
     fileprivate let generation: UInt64
   }
@@ -16,12 +16,26 @@ final class AuthStartPasskeySignInOperation {
   private var generation: UInt64 = 0
   private var task: Task<Void, Never>?
 
+  func begin() -> Token {
+    cancel()
+    return Token(generation: generation)
+  }
+
   func run(
     _ operation: @escaping @MainActor (Token) async -> Void
   ) async {
-    cancel()
-    let token = Token(generation: generation)
+    let token = begin()
+    await run(token: token, operation)
+  }
+
+  func run(
+    token: Token,
+    _ operation: @escaping @MainActor (Token) async -> Void
+  ) async {
+    guard isCurrent(token) else { return }
+
     let task = Task { @MainActor in
+      guard isCurrent(token) else { return }
       await operation(token)
     }
     self.task = task

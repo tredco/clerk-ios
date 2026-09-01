@@ -8,36 +8,51 @@
 import ClerkKit
 import SwiftUI
 
-struct AsyncButton<Label: View>: View {
+struct AsyncButton<ActionContext, Label: View>: View {
   @Environment(\.authFlowRequestOwnerId) private var authFlowRequestOwnerId
   @State private var isRunning = false
 
   let role: ButtonRole?
-  let action: () async -> Void
+  let onStart: @MainActor () -> ActionContext
+  let action: @MainActor (ActionContext) async -> Void
   let label: (_ isRunning: Bool) -> Label
 
   var onIsRunningChanged: ((Bool) -> Void)?
 
   init(
     role: ButtonRole? = nil,
-    action: @escaping () async -> Void,
+    action: @escaping @MainActor () async -> Void,
+    @ViewBuilder label: @escaping (_ isRunning: Bool) -> Label
+  ) where ActionContext == Void {
+    self.role = role
+    onStart = {}
+    self.action = { _ in await action() }
+    self.label = label
+  }
+
+  init(
+    role: ButtonRole? = nil,
+    onStart: @escaping @MainActor () -> ActionContext,
+    action: @escaping @MainActor (ActionContext) async -> Void,
     @ViewBuilder label: @escaping (_ isRunning: Bool) -> Label
   ) {
     self.role = role
+    self.onStart = onStart
     self.action = action
     self.label = label
   }
 
   var body: some View {
     Button(role: role) {
-      Task {
-        if isRunning { return }
-        isRunning = true
+      guard !isRunning else { return }
+      isRunning = true
+      let actionContext = onStart()
+
+      Task { @MainActor in
         defer { isRunning = false }
-        await AuthFlowRequestScope.withOwner(
-          authFlowRequestOwnerId,
-          operation: action
-        )
+        await AuthFlowRequestScope.withOwner(authFlowRequestOwnerId) {
+          await action(actionContext)
+        }
       }
     } label: {
       label(isRunning)

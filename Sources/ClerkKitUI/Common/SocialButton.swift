@@ -9,7 +9,7 @@ import ClerkKit
 import NukeUI
 import SwiftUI
 
-struct SocialButton: View {
+struct SocialButton<ActionContext>: View {
   @Environment(Clerk.self) private var clerk
   @Environment(\.colorScheme) private var colorScheme
   @Environment(\.clerkTheme) private var theme
@@ -18,8 +18,8 @@ struct SocialButton: View {
   let transferable: Bool
   let unsafeMetadata: JSON?
   let showsTitle: Bool
-  var onStart: (() -> Void)?
-  var action: (() async -> Void)?
+  var onStart: @MainActor () -> ActionContext
+  var action: (@MainActor (ActionContext) async -> Void)?
   var result: Result<Void, Error>?
   var onSuccess: ((TransferFlowResult) -> Void)?
   var onError: ((Error) -> Void)?
@@ -79,11 +79,12 @@ struct SocialButton: View {
     transferable: Bool = true,
     unsafeMetadata: JSON? = nil,
     showsTitle: Bool = true
-  ) {
+  ) where ActionContext == Void {
     self.provider = provider
     self.transferable = transferable
     self.unsafeMetadata = unsafeMetadata
     self.showsTitle = showsTitle
+    onStart = {}
   }
 
   init(
@@ -91,12 +92,33 @@ struct SocialButton: View {
     transferable: Bool = true,
     unsafeMetadata: JSON? = nil,
     showsTitle: Bool = true,
-    action: (() async -> Void)? = nil
+    action: (@MainActor () async -> Void)? = nil
+  ) where ActionContext == Void {
+    self.provider = provider
+    self.transferable = transferable
+    self.unsafeMetadata = unsafeMetadata
+    self.showsTitle = showsTitle
+    onStart = {}
+    if let action {
+      self.action = { _ in await action() }
+    } else {
+      self.action = nil
+    }
+  }
+
+  init(
+    provider: OAuthProvider,
+    transferable: Bool = true,
+    unsafeMetadata: JSON? = nil,
+    showsTitle: Bool = true,
+    onStart: @escaping @MainActor () -> ActionContext,
+    action: @escaping @MainActor (ActionContext) async -> Void
   ) {
     self.provider = provider
     self.transferable = transferable
     self.unsafeMetadata = unsafeMetadata
     self.showsTitle = showsTitle
+    self.onStart = onStart
     self.action = action
   }
 
@@ -105,27 +127,28 @@ struct SocialButton: View {
     transferable: Bool = true,
     unsafeMetadata: JSON? = nil,
     showsTitle: Bool = true,
-    onStart: (() -> Void)? = nil,
+    onStart: (@MainActor () -> Void)? = nil,
     onSuccess: ((TransferFlowResult) -> Void)? = nil,
     onError: ((Error) -> Void)? = nil,
     onCancel: (() -> Void)? = nil
-  ) {
+  ) where ActionContext == Void {
     self.provider = provider
     self.transferable = transferable
     self.unsafeMetadata = unsafeMetadata
     self.showsTitle = showsTitle
-    self.onStart = onStart
+    self.onStart = {
+      onStart?()
+    }
     self.onSuccess = onSuccess
     self.onError = onError
     self.onCancel = onCancel
   }
 
   var body: some View {
-    AsyncButton {
+    AsyncButton(onStart: onStart) { actionContext in
       do {
-        onStart?()
         if let action {
-          await action()
+          await action(actionContext)
         } else {
           try await defaultAction()
         }

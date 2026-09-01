@@ -25,9 +25,12 @@ while IFS= read -r changed_path; do
     scripts/verify-tredco-localization-fork.sh | \
     Sources/ClerkKit/Resources/Localizable.xcstrings | \
     Sources/ClerkKitUI/Resources/Localizable.xcstrings | \
+    Sources/ClerkKitUI/Common/AsyncButton.swift | \
     Sources/ClerkKitUI/Common/ClerkPhoneNumberField.swift | \
-    Sources/ClerkKitUI/Components/Auth/AuthStartPasskeySignInOperation.swift | \
+    Sources/ClerkKitUI/Common/SocialButton.swift | \
+    Sources/ClerkKitUI/Components/Auth/AuthStartOperation.swift | \
     Sources/ClerkKitUI/Components/Auth/AuthStartView.swift | \
+    Sources/ClerkKitUI/Components/Auth/BiometricCredential/BiometricSignInButton.swift | \
     Sources/ClerkKitUI/Components/Auth/ClerkAccessibilityIdentifiers.swift | \
     Sources/ClerkKitUI/Components/UserProfile/UserProfileDeleteAccountConfirmationView.swift | \
     Sources/ClerkKitUI/Components/UserProfile/UserProfileDeviceRow.swift | \
@@ -38,7 +41,7 @@ while IFS= read -r changed_path; do
     Sources/ClerkKitUI/Extensions/Date+Ext.swift | \
     Sources/ClerkKitUI/Extensions/PhoneNumber+Ext.swift | \
     Tests/Localization/NorwegianStringCatalogTests.swift | \
-    Tests/UI/AuthStartPasskeySignInOperationTests.swift | \
+    Tests/UI/AuthStartOperationTests.swift | \
     Tests/UI/AutomaticPasskeyErrorPresentationTests.swift | \
     Tests/UI/ClerkPhoneNumberFieldTests.swift | \
     Tests/UI/PasskeySignInButtonVisibilityTests.swift)

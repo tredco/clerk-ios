@@ -9,23 +9,35 @@ import ClerkKit
 import LocalAuthentication
 import SwiftUI
 
-struct BiometricSignInButton: View {
+struct BiometricSignInButton<ActionContext>: View {
   @Environment(\.clerkTheme) private var theme
 
   private let biometryDisplayName: BiometryDisplayName
-  private let action: () async -> Void
+  private let onStart: @MainActor () -> ActionContext
+  private let action: @MainActor (ActionContext) async -> Void
 
   init(
     biometryDisplayName: BiometryDisplayName,
-    action: @escaping () async -> Void
+    action: @escaping @MainActor () async -> Void
+  ) where ActionContext == Void {
+    self.biometryDisplayName = biometryDisplayName
+    onStart = {}
+    self.action = { _ in await action() }
+  }
+
+  init(
+    biometryDisplayName: BiometryDisplayName,
+    onStart: @escaping @MainActor () -> ActionContext,
+    action: @escaping @MainActor (ActionContext) async -> Void
   ) {
     self.biometryDisplayName = biometryDisplayName
+    self.onStart = onStart
     self.action = action
   }
 
   var body: some View {
-    AsyncButton {
-      await action()
+    AsyncButton(onStart: onStart) { actionContext in
+      await action(actionContext)
     } label: { isRunning in
       label
         .frame(maxWidth: .infinity)

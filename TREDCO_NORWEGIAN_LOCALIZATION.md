@@ -1,6 +1,6 @@
 # Tredco iOS Clerk fork
 
-This branch adds Norwegian Bokmål (`nb`) to the two Clerk string catalogs. Its locale source changes are limited to propagation inside ClerkKitUI, including runtime-formatted country names and relative dates. It also carries one narrowly scoped authentication UI patch: the prebuilt `AuthView` honors Clerk's dashboard-controlled passkey `show_sign_in_button` setting. It does not change session, storage, or network behavior.
+This branch adds Norwegian Bokmål (`nb`) to the two Clerk string catalogs. Its locale source changes are limited to propagation inside ClerkKitUI, including runtime-formatted country names and relative dates. It also carries a narrow authentication UI patch. The prebuilt `AuthView` honors Clerk's dashboard-controlled passkey `show_sign_in_button` setting and prevents superseded auth-start attempts from changing the screen. It does not change session or storage contracts, or request payloads.
 
 ## Upstream base
 
@@ -24,13 +24,13 @@ The localization support patches are:
 - format phone-country names and device/passkey relative dates with the SwiftUI environment locale;
 - validate account deletion with the same localized `DELETE` value shown by the selected app locale.
 
-The passkey patch renders the existing localized “Sign in with your passkey” action when passkeys are enabled as a first factor and the dashboard requests a dedicated button. It uses the full interactive credential selector, remains hidden in sign-up-only and locked-identifier flows, and leaves automatic passkey and AutoFill behavior unchanged.
+The passkey patch renders the existing localized “Sign in with your passkey” action when passkeys are enabled as a first factor and the dashboard requests a dedicated button. It uses the full interactive credential selector and remains hidden in sign-up-only and locked-identifier flows. Continue, interactive passkey, social, and biometric actions share one cancellable operation generation, claimed when a tap is accepted. A late result from an older attempt cannot navigate, show an error, or restart automatic sign-in. Identifier switching and view dismissal invalidate the generation. Automatic passkey and AutoFill behavior remain unchanged.
 
 ## Updating Clerk
 
 1. Fetch the new Clerk tag from `upstream` and create a new `tredco/nb-NO-<version>` branch from that tag.
 2. Replay the Norwegian localization commits. Resolve catalog conflicts by keeping all upstream keys and languages, then adding the `nb` string unit beside them. Recheck whether upstream still needs the locale-propagation and deletion-confirmation patches before carrying them forward.
-3. Check whether upstream's prebuilt `AuthView` now honors `show_sign_in_button`. Drop Tredco's passkey source and tests if it does; otherwise replay the small patch and its UI tests.
+3. Check whether upstream's prebuilt `AuthView` now honors `show_sign_in_button` and fences competing auth-start methods. Drop Tredco's passkey source and tests only when upstream handles both; otherwise replay the parts that remain necessary.
 4. Translate every new source key into Norwegian Bokmål. Keep printf/Swift placeholders such as `%@` and `%lld` unchanged, including their count. Keep `LegalConsentView://` link targets unchanged.
 5. Run `swift test --filter NorwegianStringCatalogTests`. The completeness test fails if either catalog has a key without an `nb` translation, if placeholders or legal-link targets differ, or if a deletion instruction disagrees with its accepted localized value. Pushing a `tredco/nb-NO-*` branch also runs the fork's full shared checks workflow.
 6. Review the changed screens on an iOS simulator set to Norwegian Bokmål. At minimum, cover sign-in, verification, password recovery, account security, profile editing, and account deletion. Exercise the passkey action on a physical device when that patch remains necessary.
