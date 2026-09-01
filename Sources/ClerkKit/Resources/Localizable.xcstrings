@@ -57,6 +57,12 @@
             "value" : "Watch ID 메타데이터 전환이 아직 보류 중입니다."
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "En overgang for Watch-identitetsmetadata venter fortsatt."
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -155,6 +161,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "호스팅 인증 세션이 이미 진행 중입니다."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "En økt med vertsbasert autentisering pågår allerede."
           }
         },
         "pl" : {
@@ -257,6 +269,12 @@
             "value" : "웹 인증 세션이 이미 진행 중입니다."
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "En økt med nettbasert autentisering pågår allerede."
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -355,6 +373,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "해결되지 않은 Watch ID 메타데이터를 게시할 수 없습니다."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kan ikke publisere uavklarte Watch-identitetsmetadata."
           }
         },
         "pl" : {
@@ -457,6 +481,12 @@
             "value" : "Clerk가 이미 재구성 중입니다. 현재 재구성이 완료될 때까지 기다린 후 다시 시작하세요."
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clerk konfigureres allerede på nytt. Vent til den pågående konfigureringen er ferdig før du starter en ny."
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -555,6 +585,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "세션 토큰을 가져오기 전에 Clerk를 구성해야 합니다."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clerk må konfigureres før et økttoken kan hentes."
           }
         },
         "pl" : {
@@ -657,6 +693,12 @@
             "value" : "클라이언트 ID를 사용할 수 없습니다."
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Klient-ID er ikke tilgjengelig."
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -755,6 +797,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "충돌하는 Watch 인증 페이로드가 보류 중인 버전을 재사용했습니다."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Motstridende autentiseringsdata for Watch brukte en ventende versjon på nytt."
           }
         },
         "pl" : {
@@ -857,6 +905,12 @@
             "value" : "충돌하는 Watch 토큰 페이로드가 보류 중인 버전을 재사용했습니다."
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Motstridende tokendata for Watch brukte en ventende versjon på nytt."
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -955,6 +1009,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "이메일 주소가 필요합니다."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "E-postadresse er påkrevd."
           }
         },
         "pl" : {
@@ -1057,6 +1117,12 @@
             "value" : "이 로그인에는 이메일 링크 로그인을 사용할 수 없습니다."
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Innlogging med e-postlenke er ikke tilgjengelig for denne innloggingen."
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1155,6 +1221,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "호스팅 인증 콜백 URL이 시작된 리디렉션 URL과 일치하지 않습니다."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tilbakekallsadressen for vertsbasert autentisering samsvarte ikke med videresendingsadressen som startet økten."
           }
         },
         "pl" : {
@@ -1257,6 +1329,12 @@
             "value" : "호스팅 인증 콜백에 순환 토큰 nonce가 포함되지 않았습니다."
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tilbakekallet for vertsbasert autentisering manglet en roterende token-engangsverdi."
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1355,6 +1433,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "호스팅 인증 콜백에 생성된 세션이 포함되지 않았습니다."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tilbakekallet for vertsbasert autentisering manglet den opprettede økten."
           }
         },
         "pl" : {
@@ -1457,6 +1541,12 @@
             "value" : "호스팅 인증 콜백 상태가 없거나 시작된 상태와 일치하지 않습니다."
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tilstanden i tilbakekallet for vertsbasert autentisering manglet eller samsvarte ikke med tilstanden som startet økten."
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1555,6 +1645,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "호스팅 인증 완료 과정에서 생성된 세션을 활성화할 수 없습니다."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fullføringen av vertsbasert autentisering kunne ikke aktivere den opprettede økten."
           }
         },
         "pl" : {
@@ -1657,6 +1753,12 @@
             "value" : "호스팅 인증 완료 과정에서 현재 클라이언트를 업데이트할 수 없습니다."
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fullføringen av vertsbasert autentisering kunne ikke oppdatere den gjeldende klienten."
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1755,6 +1857,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "호스팅 인증 완료 과정에 생성된 세션이 포함되지 않았습니다."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fullføringen av vertsbasert autentisering manglet den opprettede økten."
           }
         },
         "pl" : {
@@ -1857,6 +1965,12 @@
             "value" : "호스팅 인증 완료 응답에 ID 동기화 메타데이터가 없습니다."
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Svaret ved fullføring av vertsbasert autentisering manglet metadata for identitetssynkronisering."
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1955,6 +2069,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "호스팅 인증 생성에서 잘못된 응답이 반환되었습니다."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oppretting av vertsbasert autentisering ga et ugyldig svar."
           }
         },
         "pl" : {
@@ -2057,6 +2177,12 @@
             "value" : "호스팅 인증에는 유효한 사용자 지정 스킴 리디렉션 URL이 필요합니다."
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vertsbasert autentisering krever en gyldig videresendingsadresse med eget URL-skjema."
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2155,6 +2281,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "주입된 Keychain 저장소는 영구 공유 세션 채택과 함께 사용할 수 없습니다."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Injisert nøkkelringlagring kan ikke brukes med varig overtakelse av en delt økt."
           }
         },
         "pl" : {
@@ -2257,6 +2389,12 @@
             "value" : "자격 증명 유형이 올바르지 않습니다."
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ugyldig type påloggingsopplysninger."
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2355,6 +2493,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "격리된 Clerk 구성은 테스트를 실행하는 동안에만 사용할 수 있습니다."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Isolert Clerk-konfigurasjon er bare tilgjengelig når tester kjøres."
           }
         },
         "pl" : {
@@ -2457,6 +2601,12 @@
             "value" : "매직 링크 콜백이 보류 중인 흐름과 일치하지 않습니다."
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tilbakekallet fra engangslenken samsvarer ikke med den ventende flyten."
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2555,6 +2705,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "매직 링크 콜백에 approval_token이 없습니다."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tilbakekallet fra engangslenken mangler approval_token."
           }
         },
         "pl" : {
@@ -2657,6 +2813,12 @@
             "value" : "매직 링크 콜백에 flow_id가 없습니다."
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tilbakekallet fra engangslenken mangler flow_id."
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2755,6 +2917,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "매직 링크 콜백이 로그인 흐름에 대한 회원 가입을 반환했습니다."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tilbakekallet fra engangslenken returnerte registrering for en innloggingsflyt."
           }
         },
         "pl" : {
@@ -2857,6 +3025,12 @@
             "value" : "매직 링크 콜백이 회원 가입 흐름에 대한 티켓을 반환했습니다."
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tilbakekallet fra engangslenken returnerte en billett for en registreringsflyt."
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2955,6 +3129,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "콜백 URL이 없습니다"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tilbakekallsadresse mangler"
           }
         },
         "pl" : {
@@ -3057,6 +3237,12 @@
             "value" : "보류 중인 매직 링크 흐름을 찾을 수 없습니다."
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fant ingen ventende flyt for engangslenke."
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3155,6 +3341,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "리디렉션 URI가 없습니다. 이메일 링크 로그인을 시작할 수 없습니다."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Videresendings-URI mangler. Kan ikke starte innlogging med e-postlenke."
           }
         },
         "pl" : {
@@ -3257,6 +3449,12 @@
             "value" : "리디렉션 URI가 없습니다. 이메일 링크 회원 가입 인증을 시작할 수 없습니다."
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Videresendings-URI mangler. Kan ikke starte bekreftelse av registrering med e-postlenke."
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3355,6 +3553,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "리디렉션 URL이 없거나 유효하지 않습니다. 외부 인증 흐름을 시작할 수 없습니다。"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Videresendingsadressen mangler eller er ugyldig. Kan ikke starte ekstern autentisering."
           }
         },
         "pl" : {
@@ -3457,6 +3661,12 @@
             "value" : "공유 세션 동기화에는 비어 있지 않은 Keychain 접근 그룹이 필요합니다."
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Synkronisering av delt økt krever en nøkkelringtilgangsgruppe som ikke er tom."
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3555,6 +3765,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "공유 세션 동기화에는 비어 있지 않은 애플리케이션 번들 식별자가 필요합니다."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Synkronisering av delt økt krever en pakke-ID for appen som ikke er tom."
           }
         },
         "pl" : {
@@ -3657,6 +3873,12 @@
             "value" : "문제가 발생했습니다. 다시 시도해 주세요."
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Noe gikk galt. Prøv på nytt."
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3755,6 +3977,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "재구성 중에 Clerk Keychain 항목을 지울 수 없습니다."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kunne ikke fjerne Clerk-elementer fra nøkkelringen under ny konfigurering."
           }
         },
         "pl" : {
@@ -3857,6 +4085,12 @@
             "value" : "멤버십을 삭제할 수 없습니다: userId가 없습니다"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kan ikke slette medlemskapet: userId mangler"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3955,6 +4189,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "안전한 무작위 데이터를 생성할 수 없습니다."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kunne ikke generere sikre tilfeldige data."
           }
         },
         "pl" : {
@@ -4057,6 +4297,12 @@
             "value" : "패스키에 대한 챌린지를 가져올 수 없습니다."
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kunne ikke hente utfordringen for passnøkkelen."
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4155,6 +4401,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "패스키의 사용자 ID를 가져올 수 없습니다."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kunne ikke hente bruker-ID-en for passnøkkelen."
           }
         },
         "pl" : {
@@ -4257,6 +4509,12 @@
             "value" : "패스키의 사용자 이름을 가져올 수 없습니다."
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kunne ikke hente brukernavnet for passnøkkelen."
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4355,6 +4613,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Apple ID 자격 증명을 가져올 수 없습니다."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kunne ikke hente påloggingsopplysningene for Apple-ID-en din."
           }
         },
         "pl" : {
@@ -4457,6 +4721,12 @@
             "value" : "Apple ID 토큰을 가져올 수 없습니다."
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kunne ikke hente identitetstokenet fra Apple."
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4555,6 +4825,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "웹 인증 세션을 시작할 수 없습니다."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kunne ikke starte økten med nettbasert autentisering."
           }
         },
         "pl" : {
@@ -4657,6 +4933,12 @@
             "value" : "멤버십을 업데이트할 수 없습니다: userId가 없습니다"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kan ikke oppdatere medlemskapet: userId mangler"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4755,6 +5037,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "첫 번째 인증 요소 전략이 설정되지 않아 코드를 확인할 수 없습니다."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kan ikke bekrefte koden fordi ingen strategi for første faktor er valgt."
           }
         },
         "pl" : {
@@ -4857,6 +5145,12 @@
             "value" : "전략 '%@'의 코드를 확인할 수 없습니다."
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kan ikke bekrefte koden for strategien «%@»."
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4955,6 +5249,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Watch ID 메타데이터 버전이 소진되었습니다."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Versjonen for Watch-identitetsmetadata er brukt opp."
           }
         },
         "pl" : {

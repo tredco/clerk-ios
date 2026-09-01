@@ -57,6 +57,12 @@
             "value" : ""
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -153,6 +159,12 @@
           }
         },
         "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " "
+          }
+        },
+        "nb" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : " "
@@ -260,6 +272,12 @@
             "value" : "%@ · 가입일: %@"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ · Ble med %@"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -358,6 +376,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@이(가) 이 계정에서 제거됩니다. 이 연결된 계정을 사용하여 더 이상 로그인할 수 없습니다."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ fjernes fra denne kontoen. Du kan ikke lenger logge inn med denne tilknyttede kontoen."
           }
         },
         "pl" : {
@@ -460,6 +484,12 @@
             "value" : "%@이(가) 이 계정에서 제거됩니다. 이 이메일 주소를 사용하여 더 이상 로그인할 수 없습니다."
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ fjernes fra denne kontoen. Du kan ikke lenger logge inn med denne e-postadressen."
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -558,6 +588,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@이(가) 이 계정에서 제거됩니다. 이 패스키를 사용하여 더 이상 로그인할 수 없습니다."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ fjernes fra denne kontoen. Du kan ikke lenger logge inn med denne passnøkkelen."
           }
         },
         "pl" : {
@@ -660,6 +696,12 @@
             "value" : "%@이(가) 이 계정에서 제거됩니다. 이 전화번호를 사용하여 더 이상 로그인할 수 없습니다."
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ fjernes fra denne kontoen. Du kan ikke lenger logge inn med dette telefonnummeret."
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -758,6 +800,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@는 로그인 시 더 이상 인증 코드를 받지 않습니다."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ mottar ikke lenger bekreftelseskoder ved innlogging."
           }
         },
         "pl" : {
@@ -860,6 +908,12 @@
             "value" : "이 전화번호로 인증 코드가 포함된 문자 메시지가 전송됩니다. 메시지 및 데이터 요금이 적용될 수 있습니다."
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "En tekstmelding med en bekreftelseskode sendes til dette telefonnummeret. Kostnader for meldinger og data kan påløpe."
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -958,6 +1012,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@로 인증 코드가 전송됐어요. 코드를 입력해 주세요."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "En bekreftelseskode ble sendt til %@. Skriv inn koden for å fortsette."
           }
         },
         "pl" : {
@@ -1060,6 +1120,12 @@
             "value" : "요청 수락"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Godta forespørsel"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1158,6 +1224,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "계정"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Konto"
           }
         },
         "pl" : {
@@ -1260,6 +1332,12 @@
             "value" : "활성 기기"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "AKTIVE ENHETER"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1358,6 +1436,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "패스키 추가"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Legg til en passnøkkel"
           }
         },
         "pl" : {
@@ -1460,6 +1544,12 @@
             "value" : "계정 추가"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Legg til konto"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1558,6 +1648,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "인증 애플리케이션 추가"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Legg til autentiseringsapp"
           }
         },
         "pl" : {
@@ -1660,6 +1756,12 @@
             "value" : "도메인 추가"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Legg til domene"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1758,6 +1860,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "이메일 주소 추가"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Legg til e-postadresse"
           }
         },
         "pl" : {
@@ -1860,6 +1968,12 @@
             "value" : "비밀번호 추가"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Legg til passord"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1958,6 +2072,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "전화번호 추가"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Legg til telefonnummer"
           }
         },
         "pl" : {
@@ -2060,6 +2180,12 @@
             "value" : "SMS 코드 인증 추가"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Legg til totrinnsbekreftelse via SMS"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2158,6 +2284,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "도메인을 추가해 인증하세요. 이 도메인의 이메일을 가진 사용자는 조직에 자동으로 참여하거나 참여 요청을 할 수 있어요."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Legg til domenet du vil bekrefte. Brukere med e-postadresser på dette domenet kan bli med i organisasjonen automatisk eller be om å få bli med."
           }
         },
         "pl" : {
@@ -2260,6 +2392,12 @@
             "value" : "2단계 인증 추가"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Legg til totrinnsbekreftelse"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2360,6 +2498,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "관리자"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Administrator"
           }
         },
         "pl" : {
@@ -2468,6 +2612,12 @@
             "value" : "허용"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tillat"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2574,6 +2724,12 @@
             "value" : "%@ 허용"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tillat %@"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2674,6 +2830,12 @@
             "value" : "인증된 이메일 도메인을 기준으로 사용자가 자동 참여하거나 참여 요청을 할 수 있게 해요."
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La brukere bli med i organisasjonen automatisk eller be om å få bli med basert på et bekreftet e-postdomene."
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2772,6 +2934,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "또는 인증기가 TOTP URI를 지원하는 경우 전체 URI를 복사할 수도 있습니다."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alternativt, hvis autentiseringsappen din støtter TOTP URI-er, kan du også kopiere hele URI-en."
           }
         },
         "pl" : {
@@ -2881,6 +3049,12 @@
             "value" : "애플리케이션"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "App"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2983,6 +3157,12 @@
             "value" : "이 조직을 삭제할까요?"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Er du sikker på at du vil slette denne organisasjonen?"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3081,6 +3261,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "계정을 삭제하시겠습니까? 이 작업은 영구적이며 되돌릴 수 없습니다."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Er du sikker på at du vil slette kontoen din? Handlingen er permanent og kan ikke angres."
           }
         },
         "pl" : {
@@ -3185,6 +3371,12 @@
             "value" : "이 조직을 탈퇴할까요? 조직과 관련 앱에 대한 접근 권한을 잃게 돼요."
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Er du sikker på at du vil forlate organisasjonen? Du mister tilgangen til organisasjonen og appene dens."
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3284,6 +3476,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "인증 앱"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Autentiseringsapp"
           }
         },
         "pl" : {
@@ -3386,6 +3584,12 @@
             "value" : "OTP 앱 확인이 활성화되었습니다."
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bekreftelse med autentiseringsapp er aktivert"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3484,6 +3688,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "인증 애플리케이션"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Autentiseringsapp"
           }
         },
         "pl" : {
@@ -3586,6 +3796,12 @@
             "value" : "자동 초대"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Automatiske invitasjoner"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3684,6 +3900,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "자동 제안"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Automatiske forslag"
           }
         },
         "pl" : {
@@ -3786,6 +4008,12 @@
             "value" : "뒤로"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tilbake"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3884,6 +4112,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "백업 코드"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reservekode"
           }
         },
         "pl" : {
@@ -3986,6 +4220,12 @@
             "value" : "백업 코드"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reservekoder"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4084,6 +4324,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "백업 코드가 이제 활성화되었습니다. 인증 장치에 접근할 수 없을 때 이 중 하나를 사용하여 계정에 로그인할 수 있습니다. 각 코드는 한 번만 사용할 수 있습니다."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reservekoder er nå aktivert. Hvis du mister tilgangen til autentiseringsenheten, kan du bruke en av kodene til å logge inn. Hver kode kan bare brukes én gang."
           }
         },
         "pl" : {
@@ -4186,6 +4432,12 @@
             "value" : "취소"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Avbryt"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4284,6 +4536,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "로고 변경"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bytt logo"
           }
         },
         "pl" : {
@@ -4386,6 +4644,12 @@
             "value" : "비밀번호 변경"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Endre passord"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4484,6 +4748,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "역할 변경"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Endre rolle"
           }
         },
         "pl" : {
@@ -4586,6 +4856,12 @@
             "value" : "이메일을 확인하세요"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sjekk e-posten din"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4686,6 +4962,12 @@
             "value" : "휴대폰을 확인하세요"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sjekk telefonen din"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4784,6 +5066,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "사용자 이름을 선택하세요."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Velg et brukernavn."
           }
         },
         "pl" : {
@@ -4888,6 +5176,12 @@
             "value" : "계정 선택"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Velg en konto"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4990,6 +5284,12 @@
             "value" : "조직 선택"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Velg en organisasjon"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5088,6 +5388,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "파일 선택"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Velg fil"
           }
         },
         "pl" : {
@@ -5190,6 +5496,12 @@
             "value" : "사진 보관함에서 선택"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Velg fra bildebiblioteket"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5290,6 +5602,12 @@
             "value" : "이 도메인 사용자가 조직에 참여하는 방법을 선택하세요."
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Velg hvordan brukere fra dette domenet kan bli med i organisasjonen."
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5388,6 +5706,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "2단계 인증 코드를 받을 방법을 선택하세요."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Velg hvordan du vil motta koden for totrinnsbekreftelse."
           }
         },
         "pl" : {
@@ -5492,6 +5816,12 @@
             "value" : "SMS 코드 2단계 인증에 사용할 전화번호를 선택하세요."
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Velg telefonnummeret du vil bruke til totrinnsbekreftelse via SMS"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5590,6 +5920,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "추가 보안 계층으로 계정을 보호하기 위해 선호하는 방법을 선택하세요."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Velg hvilken metode du foretrekker for å beskytte kontoen din med et ekstra sikkerhetslag"
           }
         },
         "pl" : {
@@ -5692,6 +6028,12 @@
             "value" : "비밀번호를 선택하세요"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Velg et passord"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5790,6 +6132,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "사용자 이름을 선택하세요"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Velg et brukernavn"
           }
         },
         "pl" : {
@@ -5892,6 +6240,12 @@
             "value" : "닫기"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lukk"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5990,6 +6344,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "프로필을 완성하세요"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fullfør profilen din"
           }
         },
         "pl" : {
@@ -6092,6 +6452,12 @@
             "value" : "비밀번호 확인"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bekreft passord"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6192,6 +6558,12 @@
             "value" : "계정 연결"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Koble til konto"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6290,6 +6662,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "연결된 계정"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TILKNYTTEDE KONTOER"
           }
         },
         "pl" : {
@@ -6394,6 +6772,12 @@
             "value" : "초대가 필요하면 조직 관리자에게 문의해 주세요."
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kontakt administratoren for organisasjonen for å få en invitasjon."
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6492,6 +6876,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "계속"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fortsett"
           }
         },
         "pl" : {
@@ -6594,6 +6984,12 @@
             "value" : "%@(으)로 계속하려면"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fortsett til %@"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6692,6 +7088,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@(으)로 계속하기"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fortsett med %@"
           }
         },
         "pl" : {
@@ -6794,6 +7196,12 @@
             "value" : "클립보드에 복사"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kopier til utklippstavlen"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6892,6 +7300,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "고유한 비밀번호를 만드세요."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lag et unikt passord."
           }
         },
         "pl" : {
@@ -6996,6 +7410,12 @@
             "value" : "조직 만들기"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opprett organisasjon"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7094,6 +7514,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "계정 만들기"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opprett kontoen din"
           }
         },
         "pl" : {
@@ -7196,6 +7622,12 @@
             "value" : "생성됨: %@"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opprettet: %@"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7294,6 +7726,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "현재 비밀번호"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nåværende passord"
           }
         },
         "pl" : {
@@ -7396,6 +7834,12 @@
             "value" : "기본값"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Standard"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7494,6 +7938,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "삭제"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slett"
           }
         },
         "pl" : {
@@ -7596,6 +8046,12 @@
             "value" : "삭제"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "DELETE"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7696,6 +8152,12 @@
             "value" : "계정 삭제"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slett konto"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7794,6 +8256,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "계정 삭제"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SLETT KONTO"
           }
         },
         "pl" : {
@@ -7898,6 +8366,12 @@
             "value" : "조직 삭제"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slett organisasjon"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7998,6 +8472,12 @@
             "value" : "대기 중인 초대와 제안 삭제"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slett ventende invitasjoner og forslag"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8096,6 +8576,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "데스크톱 기기"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Datamaskin"
           }
         },
         "pl" : {
@@ -8204,6 +8690,12 @@
             "value" : "개발 모드"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Utviklingsmodus"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8302,6 +8794,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "인증코드를 받지 못하셨나요?"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fikk du ikke noen kode?"
           }
         },
         "pl" : {
@@ -8406,6 +8904,12 @@
             "value" : "이메일을 받지 못하셨나요?"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fikk du ikke noen e-post?"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8506,6 +9010,12 @@
             "value" : "도메인"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Domene"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8604,6 +9114,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "완료"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ferdig"
           }
         },
         "pl" : {
@@ -8708,6 +9224,12 @@
             "value" : "다운로드"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Last ned"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8806,6 +9328,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "프로필 편집"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rediger profil"
           }
         },
         "pl" : {
@@ -8908,6 +9436,12 @@
             "value" : "이메일 주소"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "E-postadresse"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9008,6 +9542,12 @@
             "value" : "이메일 주소"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "E-POSTADRESSER"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9106,6 +9646,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@에 코드 전송"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Send kode på e-post til %@"
           }
         },
         "pl" : {
@@ -9210,6 +9756,12 @@
             "value" : "%@에 이메일 링크 전송"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Send lenke på e-post til %@"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9308,6 +9860,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "이메일 지원"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Send e-post til kundestøtte"
           }
         },
         "pl" : {
@@ -9416,6 +9974,12 @@
             "value" : "%@을 활성화하여 더 빠르게 접근"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aktiver %@ for raskere tilgang"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9522,6 +10086,12 @@
             "value" : "%@을 활성화하여 %@에 더 빠르게 접근"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aktiver %@ for raskere tilgang til %@"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9620,6 +10190,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "백업 코드 입력"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skriv inn en reservekode"
           }
         },
         "pl" : {
@@ -9724,6 +10300,12 @@
             "value" : "소문자, 숫자, 하이픈을 사용해 슬러그를 입력하세요."
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skriv inn et URL-navn med små bokstaver, tall og bindestreker."
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9822,6 +10404,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "이메일 주소 입력"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skriv inn e-postadresser"
           }
         },
         "pl" : {
@@ -9924,6 +10512,12 @@
             "value" : "하나 이상의 이메일 주소를 공백이나 쉼표로 구분해 입력하거나 붙여넣으세요."
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skriv inn eller lim inn én eller flere e-postadresser, atskilt med mellomrom eller komma."
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10022,6 +10616,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "비밀번호 입력"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skriv inn passord"
           }
         },
         "pl" : {
@@ -10124,6 +10724,12 @@
             "value" : "사용하고 싶은 이메일 주소를 입력하세요."
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skriv inn e-postadressen du vil bruke."
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10224,6 +10830,12 @@
             "value" : "계정 비밀번호 입력"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skriv inn passordet til kontoen din"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10322,6 +10934,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "사용하고 싶은 전화번호를 입력하세요."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skriv inn telefonnummeret du vil bruke."
           }
         },
         "pl" : {
@@ -10425,6 +11043,12 @@
             "value" : "인증신청에서 받은 인증번호를 입력하세요."
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skriv inn bekreftelseskoden fra autentiseringsappen"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10523,6 +11147,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "인증 애플리케이션에서 확인 코드를 입력하세요."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skriv inn bekreftelseskoden fra autentiseringsappen din."
           }
         },
         "pl" : {
@@ -10626,6 +11256,12 @@
             "value" : "다음으로 전송된 인증 코드를 입력하세요"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skriv inn bekreftelseskoden som ble sendt til"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10724,6 +11360,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@로 전송된 인증 코드를 입력하세요"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skriv inn bekreftelseskoden som ble sendt til %@"
           }
         },
         "pl" : {
@@ -10826,6 +11468,12 @@
             "value" : "새 비밀번호를 설정하려면 현재 비밀번호를 입력하세요."
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skriv inn det nåværende passordet ditt for å lage et nytt."
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10926,6 +11574,12 @@
             "value" : "이메일 입력"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skriv inn e-postadressen din"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -11024,6 +11678,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "이메일 또는 사용자 이름 입력"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skriv inn e-postadressen eller brukernavnet ditt"
           }
         },
         "pl" : {
@@ -11128,6 +11788,12 @@
             "value" : "조직 정보를 입력해 계속하세요"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skriv inn opplysningene om organisasjonen for å fortsette"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -11226,6 +11892,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "비밀번호 입력"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skriv inn passordet ditt"
           }
         },
         "pl" : {
@@ -11328,6 +12000,12 @@
             "value" : "전화번호 입력"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skriv inn telefonnummeret ditt"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -11426,6 +12104,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "사용자 이름 입력"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skriv inn brukernavnet ditt"
           }
         },
         "pl" : {
@@ -11528,6 +12212,12 @@
             "value" : "문제가 발생했나요? 다음 방법 중 하나를 사용하여 로그인할 수 있습니다."
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Har du problemer? Du kan bruke en av disse metodene til å logge inn."
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -11626,6 +12316,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "이름"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fornavn"
           }
         },
         "pl" : {
@@ -11728,6 +12424,12 @@
             "value" : "먼저 이메일 주소로 전송된 코드를 입력하세요"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Først, skriv inn koden som ble sendt til e-posten din"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -11826,6 +12528,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "먼저 휴대폰으로 전송된 코드를 입력하세요"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Først, skriv inn koden som ble sendt til telefonen din"
           }
         },
         "pl" : {
@@ -11928,6 +12636,12 @@
             "value" : "비밀번호를 잊으셨나요?"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Glemt passord?"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -12026,6 +12740,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "도움말 보기"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Få hjelp"
           }
         },
         "pl" : {
@@ -12128,6 +12848,12 @@
             "value" : "조직에 참여할 사람을 초대하여 시작하세요"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kom i gang ved å invitere noen til organisasjonen"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -12226,6 +12952,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "뒤로 가기"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gå tilbake"
           }
         },
         "pl" : {
@@ -12328,6 +13060,12 @@
             "value" : "비밀번호 숨기기"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skjul passord"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -12426,6 +13164,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "[개인정보 보호정책](LegalConsentView://privacy)에 동의합니다"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jeg godtar [personvernerklæringen](LegalConsentView://privacy)"
           }
         },
         "pl" : {
@@ -12528,6 +13272,12 @@
             "value" : "[서비스 약관](LegalConsentView://terms)에 동의합니다"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jeg godtar [bruksvilkårene](LegalConsentView://terms)"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -12626,6 +13376,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "[서비스 약관](LegalConsentView://terms) 및 [개인정보 보호정책](LegalConsentView://privacy)에 동의합니다"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jeg godtar [bruksvilkårene](LegalConsentView://terms) og [personvernerklæringen](LegalConsentView://privacy)"
           }
         },
         "pl" : {
@@ -12730,6 +13486,12 @@
             "value" : "필수 계정 설정을 완료하는 데 문제가 있는 경우 이메일을 보내주시면 최대한 빨리 완료하도록 도와드리겠습니다."
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hvis du har problemer med å fullføre oppsettet av kontoen, kan du sende oss en e-post. Vi hjelper deg så snart som mulig."
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -12828,6 +13590,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "계정 생성에 문제가 있으시면 이메일로 문의해 주세요. 최대한 빨리 등록을 완료하도록 도와드리겠습니다."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hvis du har problemer med å opprette kontoen, kan du sende oss en e-post. Vi hjelper deg med registreringen så snart som mulig."
           }
         },
         "pl" : {
@@ -12930,6 +13698,12 @@
             "value" : "계정 로그인에 문제가 있으시면 이메일로 문의해 주세요. 최대한 빨리 접근 권한을 복구하도록 도와드리겠습니다."
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hvis du har problemer med å logge inn, kan du sende oss en e-post. Vi hjelper deg med å få tilgang igjen så snart som mulig."
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -13028,6 +13802,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "국제"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Internasjonalt"
           }
         },
         "pl" : {
@@ -13130,6 +13910,12 @@
             "value" : "초대"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Invitasjoner"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -13230,6 +14016,12 @@
             "value" : "초대"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inviter"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -13328,6 +14120,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "새 멤버 초대"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inviter nye medlemmer"
           }
         },
         "pl" : {
@@ -13431,6 +14229,12 @@
             "value" : "초대일: %@"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Invitert %@"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -13529,6 +14333,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "이전 비밀번호를 사용했을 수 있는 모든 다른 기기에서 로그아웃하는 것이 좋습니다."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vi anbefaler at du logger ut av alle andre enheter som kan ha brukt det gamle passordet."
           }
         },
         "pl" : {
@@ -13631,6 +14441,12 @@
             "value" : "참여"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bli med"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -13729,6 +14545,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "기존 조직에 참여하세요"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bli med i en eksisterende organisasjon"
           }
         },
         "pl" : {
@@ -13833,6 +14655,12 @@
             "value" : "기존 조직에 참여하거나 새 조직을 만드세요"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bli med i en eksisterende organisasjon eller opprett en ny"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -13932,6 +14760,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "가입일: %@"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ble med %@"
           }
         },
         "pl" : {
@@ -14034,6 +14868,12 @@
             "value" : "성"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Etternavn"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -14134,6 +14974,12 @@
             "value" : "마지막 사용"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sist brukt"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -14232,6 +15078,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "마지막 사용: %@"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sist brukt: %@"
           }
         },
         "pl" : {
@@ -14336,6 +15188,12 @@
             "value" : "조직 탈퇴"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Forlat organisasjonen"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -14436,6 +15294,12 @@
             "value" : "계정에 다른 로그인 옵션을 연결하세요. 사용하기 전에 확인이 필요합니다."
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Knytt et nytt innloggingsalternativ til kontoen din. Du må bekrefte det før det kan brukes."
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -14534,6 +15398,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "연결됨"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tilknyttet"
           }
         },
         "pl" : {
@@ -14638,6 +15508,12 @@
             "value" : "시간 기반 또는 일회용 비밀번호가 활성화되어 있는지 확인한 다음 계정 연결을 완료하세요."
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kontroller at tidsbaserte passord eller engangspassord er aktivert, og fullfør deretter tilknytningen til kontoen."
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -14740,6 +15616,12 @@
             "value" : "관리"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Administrer"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -14838,6 +15720,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "계정 관리"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Administrer konto"
           }
         },
         "pl" : {
@@ -14942,6 +15830,12 @@
             "value" : "수동 설정 키"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Manuell oppsettsnøkkel"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -15040,6 +15934,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "멤버"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Medlem"
           }
         },
         "pl" : {
@@ -15144,6 +16044,12 @@
             "value" : "멤버"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Medlemmer"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -15242,6 +16148,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "MFA 예약됨"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reservert for MFA"
           }
         },
         "pl" : {
@@ -15344,6 +16256,12 @@
             "value" : "모바일 기기"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mobilenhet"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -15442,6 +16360,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "패스키 이름"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Navn på passnøkkel"
           }
         },
         "pl" : {
@@ -15544,6 +16468,12 @@
             "value" : "새 비밀번호"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nytt passord"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -15642,6 +16572,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "다음"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Neste"
           }
         },
         "pl" : {
@@ -15744,6 +16680,12 @@
             "value" : "자동 등록 없음"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ingen automatisk innmelding"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -15842,6 +16784,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "이 기기에서 사용할 수 있는 이메일 앱이 없습니다."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ingen e-postapp er tilgjengelig på denne enheten."
           }
         },
         "pl" : {
@@ -15944,6 +16892,12 @@
             "value" : "보낸 초대가 없습니다"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ingen invitasjoner er sendt"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -16042,6 +16996,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "멤버를 찾을 수 없음"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fant ingen medlemmer"
           }
         },
         "pl" : {
@@ -16146,6 +17106,12 @@
             "value" : "검색어와 일치하는 멤버가 없습니다. 다른 이름 또는 이메일 주소를 시도해 보세요."
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ingen medlemmer samsvarer med søket. Prøv et annet navn eller en annen e-postadresse."
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -16244,6 +17210,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "멤버십 요청이 없습니다"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ingen medlemsforespørsler"
           }
         },
         "pl" : {
@@ -16346,6 +17318,12 @@
             "value" : "사용 가능한 역할이 없습니다"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ingen roller er tilgjengelige"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -16444,6 +17422,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "인증된 도메인이 없어요"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ingen bekreftede domener"
           }
         },
         "pl" : {
@@ -16552,6 +17536,12 @@
             "value" : "나중에"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ikke nå"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -16650,6 +17640,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "계정 열기"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Åpne konto"
           }
         },
         "pl" : {
@@ -16752,6 +17748,12 @@
             "value" : "이메일 앱 열기"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Åpne e-postappen"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -16852,6 +17854,12 @@
             "value" : "또는"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "eller"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -16950,6 +17958,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "또는 다른 방법으로 로그인"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eller logg inn med en annen metode"
           }
         },
         "pl" : {
@@ -17054,6 +18068,12 @@
             "value" : "조직"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Organisasjon"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -17156,6 +18176,12 @@
             "value" : "조직 이름"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Organisasjonsnavn"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -17254,6 +18280,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "패스키"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PASSNØKLER"
           }
         },
         "pl" : {
@@ -17356,6 +18388,12 @@
             "value" : "비밀번호"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Passord"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -17456,6 +18494,12 @@
             "value" : "비밀번호"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PASSORD"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -17554,6 +18598,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "비밀번호가 일치하지 않습니다."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Passordene er ikke like."
           }
         },
         "pl" : {
@@ -17658,6 +18708,12 @@
             "value" : "승인 대기 중"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Venter på godkjenning"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -17760,6 +18816,12 @@
             "value" : "개인 계정"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Personlig konto"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -17858,6 +18920,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "전화번호"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Telefonnummer"
           }
         },
         "pl" : {
@@ -17960,6 +19028,12 @@
             "value" : "전화번호"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TELEFONNUMRE"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -18058,6 +19132,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "사진 보관함"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bildebibliotek"
           }
         },
         "pl" : {
@@ -18160,6 +19240,12 @@
             "value" : "기본"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Primær"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -18258,6 +19344,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "프로필 세부정보"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Profildetaljer"
           }
         },
         "pl" : {
@@ -18360,6 +19452,12 @@
             "value" : "다시 연결"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Koble til på nytt"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -18458,6 +19556,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "재생성"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Generer på nytt"
           }
         },
         "pl" : {
@@ -18560,6 +19664,12 @@
             "value" : "요청 거부"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Avslå forespørsel"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -18658,6 +19768,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "제거"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fjern"
           }
         },
         "pl" : {
@@ -18760,6 +19876,12 @@
             "value" : "연결된 계정 제거"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fjern tilknyttet konto"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -18858,6 +19980,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "연결 제거"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fjern tilknytning"
           }
         },
         "pl" : {
@@ -18960,6 +20088,12 @@
             "value" : "현재 로고 제거"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fjern gjeldende logo"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -19058,6 +20192,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "도메인 삭제"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fjern domene"
           }
         },
         "pl" : {
@@ -19160,6 +20300,12 @@
             "value" : "이메일 제거"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fjern e-postadresse"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -19258,6 +20404,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "이메일 주소 제거"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fjern e-postadresse"
           }
         },
         "pl" : {
@@ -19360,6 +20512,12 @@
             "value" : "멤버 제거"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fjern medlem"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -19458,6 +20616,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "패스키 제거"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fjern passnøkkel"
           }
         },
         "pl" : {
@@ -19560,6 +20724,12 @@
             "value" : "전화 제거"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fjern telefonnummer"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -19658,6 +20828,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "전화번호 제거"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fjern telefonnummer"
           }
         },
         "pl" : {
@@ -19760,6 +20936,12 @@
             "value" : "사진 제거"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fjern bilde"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -19858,6 +21040,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "2단계 인증 제거"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fjern totrinnsbekreftelse"
           }
         },
         "pl" : {
@@ -19960,6 +21148,12 @@
             "value" : "이름 바꾸기"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gi nytt navn"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -20058,6 +21252,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "패스키 이름 바꾸기"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gi passnøkkelen nytt navn"
           }
         },
         "pl" : {
@@ -20162,6 +21362,12 @@
             "value" : "참여 요청"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Be om å få bli med"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -20261,6 +21467,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "가입 요청일: %@"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Forespørsel sendt: %@"
           }
         },
         "pl" : {
@@ -20363,6 +21575,12 @@
             "value" : "요청"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Forespørsler"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -20461,6 +21679,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "재전송"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Send på nytt"
           }
         },
         "pl" : {
@@ -20563,6 +21787,12 @@
             "value" : "재전송 (%lld)"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Send på nytt (%lld)"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -20661,6 +21891,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "비밀번호 재설정"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tilbakestill passord"
           }
         },
         "pl" : {
@@ -20763,6 +21999,12 @@
             "value" : "비밀번호 재설정"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tilbakestill passordet ditt"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -20861,6 +22103,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "초대 취소"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tilbakekall invitasjon"
           }
         },
         "pl" : {
@@ -20963,6 +22211,12 @@
             "value" : "역할"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rolle"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -21061,6 +22315,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "저장"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lagre"
           }
         },
         "pl" : {
@@ -21165,6 +22425,12 @@
             "value" : "이 코드를 안전한 곳에 저장하세요. 인증 장치에 접근할 수 없는 경우 백업 코드를 사용하여 로그인할 수 있습니다."
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oppbevar kodene på et trygt sted. Hvis du mister tilgangen til autentiseringsenheten, kan du bruke en reservekode til å logge inn."
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -21263,6 +22529,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "검색"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Søk"
           }
         },
         "pl" : {
@@ -21365,6 +22637,12 @@
             "value" : "보안 제공"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sikret av"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -21465,6 +22743,12 @@
             "value" : "보안"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sikkerhet"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -21563,6 +22847,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "SMS 코드 2단계 인증에 등록할 기존 전화번호를 선택하거나 새 번호를 추가하세요."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Velg et eksisterende telefonnummer for totrinnsbekreftelse via SMS, eller legg til et nytt."
           }
         },
         "pl" : {
@@ -21667,6 +22957,12 @@
             "value" : "조직 선택"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Velg organisasjon"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -21767,6 +23063,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "계속할 계정을 선택하세요."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Velg kontoen du ønsker å fortsette med."
           }
         },
         "pl" : {
@@ -21871,6 +23173,12 @@
             "value" : "선택됨"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Valgt"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -21969,6 +23277,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "초대 보내기"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Send invitasjoner"
           }
         },
         "pl" : {
@@ -22071,6 +23385,12 @@
             "value" : "%@에 SMS 코드 전송"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Send SMS-kode til %@"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -22169,6 +23489,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "기본값으로 설정"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Angi som standard"
           }
         },
         "pl" : {
@@ -22271,6 +23597,12 @@
             "value" : "기본으로 설정"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Angi som primær"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -22371,6 +23703,12 @@
             "value" : "새 비밀번호 설정"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Angi nytt passord"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -22469,6 +23807,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "인증기에서 새로운 로그인 방법을 설정하고 아래 제공된 키를 입력하세요.\n\n시간 기반 또는 일회용 비밀번호가 활성화되어 있는지 확인한 다음 계정 연결을 완료하세요."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opprett en ny innloggingsmetode i autentiseringsappen, og skriv inn nøkkelen nedenfor.\n\nKontroller at tidsbaserte passord eller engangspassord er aktivert, og fullfør deretter tilknytningen til kontoen."
           }
         },
         "pl" : {
@@ -22573,6 +23917,12 @@
             "value" : "인증 앱에서 새로운 로그인 방법을 설정하고 아래의 수동 설정 키를 사용하여 계정에 연결하세요."
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opprett en ny innloggingsmetode i autentiseringsappen med den manuelle oppsettsnøkkelen nedenfor for å knytte den til kontoen."
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -22675,6 +24025,12 @@
             "value" : "2단계 인증 설정"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sett opp totrinnsbekreftelse"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -22773,6 +24129,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "비밀번호 표시"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vis passord"
           }
         },
         "pl" : {
@@ -22881,6 +24243,12 @@
             "value" : "%@(으)로 로그인"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Logg inn med %@"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -22979,6 +24347,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "패스키로 로그인"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Logg inn med passnøkkelen din"
           }
         },
         "pl" : {
@@ -23081,6 +24455,12 @@
             "value" : "비밀번호로 로그인"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Logg inn med passordet ditt"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -23179,6 +24559,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "로그아웃"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Logg ut"
           }
         },
         "pl" : {
@@ -23281,6 +24667,12 @@
             "value" : "모든 계정에서 로그아웃"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Logg ut av alle kontoer"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -23379,6 +24771,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "다른 모든 기기에서 로그아웃"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Logg ut fra alle andre enheter"
           }
         },
         "pl" : {
@@ -23481,6 +24879,12 @@
             "value" : "기기에서 로그아웃"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Logg ut fra enhet"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -23581,6 +24985,12 @@
             "value" : "가입하기"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opprett konto"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -23679,6 +25089,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "건너뛰기"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hopp over"
           }
         },
         "pl" : {
@@ -23783,6 +25199,12 @@
             "value" : "슬러그"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "URL-navn"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -23881,6 +25303,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "SMS 코드"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SMS-kode"
           }
         },
         "pl" : {
@@ -23983,6 +25411,12 @@
             "value" : "SMS 코드 확인이 활성화되었습니다."
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Totrinnsbekreftelse via SMS er aktivert"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -24083,6 +25517,12 @@
             "value" : "성공"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fullført"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -24181,6 +25621,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "계정 전환"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bytt konto"
           }
         },
         "pl" : {
@@ -24289,6 +25735,12 @@
             "value" : "%@ 앱은 %@을 사용하여 로그인합니다."
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Appen %@ bruker %@ til å logge deg inn."
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -24387,6 +25839,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "도메인 %@은 이메일로 인증이 필요해요."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Domenet %@ må bekreftes via e-post."
           }
         },
         "pl" : {
@@ -24489,6 +25947,12 @@
             "value" : "이메일 도메인 %@이(가) 삭제돼요."
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "E-postdomenet %@ blir fjernet."
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -24587,6 +26051,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "사진 라이브러리에서 이미지를 로드하는 중 오류가 발생했습니다."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kunne ikke laste inn bildet fra bildebiblioteket."
           }
         },
         "pl" : {
@@ -24689,6 +26159,12 @@
             "value" : "선택한 이미지 파일을 로드하는 중 오류가 발생했습니다."
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kunne ikke laste inn den valgte bildefilen."
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -24787,6 +26263,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "이 계정은 연결이 해제됐어요."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tilknytningen til denne kontoen er fjernet."
           }
         },
         "pl" : {
@@ -24891,6 +26373,12 @@
             "value" : "이 작업은 되돌릴 수 없어요."
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Handlingen er permanent og kan ikke angres."
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -24989,6 +26477,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "이 기기"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Denne enheten"
           }
         },
         "pl" : {
@@ -25091,6 +26585,12 @@
             "value" : "계속하려면"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "for å fortsette"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -25189,6 +26689,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@(으)로 계속하려면"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "for å fortsette til %@"
           }
         },
         "pl" : {
@@ -25291,6 +26797,12 @@
             "value" : "계속하려면 인증 앱에서 생성된 인증 코드를 입력하세요"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skriv inn bekreftelseskoden fra autentiseringsappen for å fortsette"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -25389,6 +26901,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "2단계 인증"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Totrinnsbekreftelse"
           }
         },
         "pl" : {
@@ -25491,6 +27009,12 @@
             "value" : "2단계 인증"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TOTRINNSBEKREFTELSE"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -25591,6 +27115,12 @@
             "value" : "2단계 인증이 이제 활성화되었습니다. 로그인할 때 추가 단계로 이 인증 앱에서 확인 코드를 입력해야 합니다.\n\n이 백업 코드를 저장하고 안전한 곳에 보관하세요. 인증 기기에 대한 액세스를 잃으면 백업 코드를 사용하여 로그인할 수 있습니다."
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Totrinnsbekreftelse er nå aktivert. Når du logger inn, må du skrive inn en bekreftelseskode fra autentiseringsappen.\n\nLagre reservekodene på et trygt sted. Hvis du mister tilgangen til autentiseringsenheten, kan du bruke en reservekode til å logge inn."
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -25689,6 +27219,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "2단계 인증 설정"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oppsett av totrinnsbekreftelse"
           }
         },
         "pl" : {
@@ -25793,6 +27329,12 @@
             "value" : "계속하려면 아래에 %@을(를) 입력하세요."
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skriv inn «%@» nedenfor for å fortsette."
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -25891,6 +27433,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "계속하려면 \"삭제\"를 입력하세요"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skriv «DELETE» for å fortsette"
           }
         },
         "pl" : {
@@ -25993,6 +27541,12 @@
             "value" : "활성 조직이 없으면 초대를 보낼 수 없습니다."
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kan ikke sende invitasjoner uten en aktiv organisasjon."
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -26091,6 +27645,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "활성 조직 없이는 조직을 업데이트할 수 없습니다."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kan ikke oppdatere organisasjonen uten en aktiv organisasjon."
           }
         },
         "pl" : {
@@ -26193,6 +27753,12 @@
             "value" : "알 수 없는 코드 인증 방법입니다. 다른 방법을 사용하세요."
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ukjent metode for kodebekreftelse. Bruk en annen metode."
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -26291,6 +27857,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "알 수 없는 기기"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ukjent enhet"
           }
         },
         "pl" : {
@@ -26393,6 +27965,12 @@
             "value" : "인증되지 않음"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ikke bekreftet"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -26493,6 +28071,12 @@
             "value" : "%@ 업데이트"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oppdater %@"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -26591,6 +28175,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "비밀번호 업데이트"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Endre passord"
           }
         },
         "pl" : {
@@ -26695,6 +28285,12 @@
             "value" : "프로필 업데이트"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oppdater profil"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -26795,6 +28391,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "로고 업로드"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Last opp logo"
           }
         },
         "pl" : {
@@ -26903,6 +28505,12 @@
             "value" : "%@을 사용하여 로그인합니다."
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bruk %@ til å logge inn."
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -27001,6 +28609,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "백업 코드 사용"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bruk en reservekode"
           }
         },
         "pl" : {
@@ -27103,6 +28717,12 @@
             "value" : "다른 방법 사용"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bruk en annen metode"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -27201,6 +28821,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "이메일 주소 사용"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bruk e-postadresse"
           }
         },
         "pl" : {
@@ -27303,6 +28929,12 @@
             "value" : "이메일 주소 또는 사용자 이름 사용"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bruk e-postadresse eller brukernavn"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -27401,6 +29033,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "전화번호 사용"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bruk telefonnummer"
           }
         },
         "pl" : {
@@ -27503,6 +29141,12 @@
             "value" : "사용자 이름 사용"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bruk brukernavn"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -27601,6 +29245,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "인증 앱 사용"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bruk autentiseringsappen din"
           }
         },
         "pl" : {
@@ -27703,6 +29353,12 @@
             "value" : "패스키 사용"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bruk passnøkkelen din"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -27801,6 +29457,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "사용자 이름"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Brukernavn"
           }
         },
         "pl" : {
@@ -27903,6 +29565,12 @@
             "value" : "사용자가 가입하면 자동으로 초대되고 언제든지 조직에 참여할 수 있어요."
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Brukere inviteres automatisk til organisasjonen når de registrerer seg, og kan bli med når som helst."
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -28001,6 +29669,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "사용자는 수동으로만 조직에 초대할 수 있어요."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Brukere kan bare inviteres manuelt til organisasjonen."
           }
         },
         "pl" : {
@@ -28103,6 +29777,12 @@
             "value" : "사용자는 참여 요청 제안을 받지만, 관리자가 승인해야 조직에 참여할 수 있어요."
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Brukere får forslag om å be om å få bli med, men må godkjennes av en administrator før de kan bli med i organisasjonen."
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -28201,6 +29881,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "조직 참여를 요청한 사용자가 검토를 위해 여기에 표시됩니다"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Brukere som ber om å få bli med i organisasjonen, vises her for gjennomgang"
           }
         },
         "pl" : {
@@ -28303,6 +29989,12 @@
             "value" : "이후에는 사용자가 조직에 자동으로 참여할 수 없어요."
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Etter dette kan ikke brukere bli med i organisasjonen automatisk."
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -28401,6 +30093,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "패스키를 사용하면 본인임을 확인할 수 있습니다. 기기에서 지문, 얼굴 또는 화면 잠금을 요구할 수 있습니다."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bruk av passnøkkelen bekrefter at det er deg. Enheten din kan be om fingeravtrykk, ansiktsgjenkjenning eller skjermlås."
           }
         },
         "pl" : {
@@ -28503,6 +30201,12 @@
             "value" : "이 인증기의 인증 코드는 로그인 시 더 이상 필요하지 않습니다."
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bekreftelseskoder fra denne autentiseringsappen kreves ikke lenger ved innlogging."
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -28601,6 +30305,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "인증 이메일 주소"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "E-postadresse for bekreftelse"
           }
         },
         "pl" : {
@@ -28705,6 +30415,12 @@
             "value" : "확인된 도메인"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bekreftede domener"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -28803,6 +30519,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "확인"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bekreft"
           }
         },
         "pl" : {
@@ -28905,6 +30627,12 @@
             "value" : "인증 앱 확인"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bekreft autentiseringsapp"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -29003,6 +30731,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "도메인 인증"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bekreft domene"
           }
         },
         "pl" : {
@@ -29105,6 +30839,12 @@
             "value" : "이메일 주소 확인"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bekreft e-postadresse"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -29203,6 +30943,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "전화번호 확인"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bekreft telefonnummer"
           }
         },
         "pl" : {
@@ -29307,6 +31053,12 @@
             "value" : "전화번호를 확인하세요"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bekreft telefonnummeret ditt"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -29405,6 +31157,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "확인 중..."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bekrefter …"
           }
         },
         "pl" : {
@@ -29507,6 +31265,12 @@
             "value" : "사용 가능한 역할을 업데이트하고 있습니다. 완료되면 멤버를 다시 초대할 수 있습니다."
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vi oppdaterer de tilgjengelige rollene. Når det er ferdig, kan du invitere medlemmer igjen."
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -29605,6 +31369,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "사용 가능한 역할을 업데이트하고 있어요. 끝나면 다시 역할을 바꿀 수 있어요."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vi oppdaterer de tilgjengelige rollene. Når det er ferdig, kan du oppdatere roller igjen."
           }
         },
         "pl" : {
@@ -29707,6 +31477,12 @@
             "value" : "환영합니다! 시작하려면 세부 정보를 입력해 주세요."
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Velkommen! Fyll ut opplysningene for å komme i gang."
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -29805,6 +31581,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "환영합니다! 계속하려면 로그인하세요"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Velkommen! Logg inn for å fortsette"
           }
         },
         "pl" : {
@@ -29907,6 +31689,12 @@
             "value" : "로그인할 때 추가 단계로 이 전화번호로 전송된 확인 코드를 입력해야 합니다.\n\n이 백업 코드를 저장하고 안전한 곳에 보관하세요. 인증 기기에 대한 액세스를 잃으면 백업 코드를 사용하여 로그인할 수 있습니다."
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Når du logger inn, må du skrive inn en bekreftelseskode som sendes til dette telefonnummeret.\n\nLagre reservekodene på et trygt sted. Hvis du mister tilgangen til autentiseringsenheten, kan du bruke en reservekode til å logge inn."
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -30005,6 +31793,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "로그인하면 이 전화번호로 전송된 인증 코드를 입력하라는 메시지가 표시됩니다."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Når du logger inn, blir du bedt om en bekreftelseskode som sendes til dette telefonnummeret."
           }
         },
         "pl" : {
@@ -30107,6 +31901,12 @@
             "value" : "로그인할 때 이 인증 앱의 인증 코드를 입력해야 합니다."
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Når du logger inn, må du skrive inn en bekreftelseskode fra autentiseringsappen."
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -30207,6 +32007,12 @@
             "value" : "앗, 문제가 발생했습니다"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Noe gikk galt"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -30305,6 +32111,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "본인"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Du"
           }
         },
         "pl" : {
@@ -30409,6 +32221,12 @@
             "value" : "이 조직의 멤버가 아닙니다. 다른 조직을 선택해 주세요."
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Du er ikke lenger medlem av denne organisasjonen. Velg en annen."
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -30511,6 +32329,12 @@
             "value" : "이 조직의 멤버가 아닙니다. 다른 조직을 선택하거나 새로 만들어 주세요."
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Du er ikke lenger medlem av denne organisasjonen. Velg eller opprett en annen."
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -30609,6 +32433,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "패스키 이름을 변경하여 더 쉽게 찾을 수 있습니다."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Du kan endre navnet på passnøkkelen for å gjøre den lettere å finne."
           }
         },
         "pl" : {
@@ -30713,6 +32543,12 @@
             "value" : "조직에 소속되어 있어야 합니다"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Du må være medlem av en organisasjon"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -30811,6 +32647,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "이 이메일 주소를 계정에 추가하기 전에 확인해야 합니다."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Du må bekrefte e-postadressen før den kan legges til kontoen din."
           }
         },
         "pl" : {
@@ -30913,6 +32755,12 @@
             "value" : "새 기기에서 로그인하고 있습니다. 계정을 안전하게 유지하기 위해 확인을 요청하고 있습니다."
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Du logger inn fra en ny enhet. Vi ber om en bekreftelse for å holde kontoen sikker."
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -31013,6 +32861,12 @@
             "value" : "계속하기 전에 계정에 새 비밀번호를 설정해야 합니다."
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kontoen din krever et nytt passord før du kan fortsette"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -31111,6 +32965,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "백업 코드는 2단계 인증을 설정할 때 받은 코드입니다."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reservekoden er en av kodene du fikk da du satte opp totrinnsbekreftelse."
           }
         },
         "pl" : {
