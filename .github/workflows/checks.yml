@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - "tredco/nb-NO-*"
 
 permissions:
   contents: read

@@ -21,7 +21,7 @@ The localized catalogs are:
 1. Fetch the new Clerk tag from `upstream` and create a new `tredco/nb-NO-<version>` branch from that tag.
 2. Replay the Norwegian localization commit. Resolve catalog conflicts by keeping all upstream keys and languages, then adding the `nb` string unit beside them.
 3. Translate every new source key into Norwegian Bokmål. Keep printf/Swift placeholders such as `%@` and `%lld` unchanged, including their count. Keep `LegalConsentView://` link targets unchanged.
-4. Run `swift test --filter NorwegianStringCatalogTests`. The completeness test fails if either catalog has a key without an `nb` translation or if placeholders differ.
+4. Run `swift test --filter NorwegianStringCatalogTests`. The completeness test fails if either catalog has a key without an `nb` translation or if placeholders differ. Pushing a `tredco/nb-NO-*` branch also runs the fork's full shared checks workflow.
 5. Review the changed screens on an iOS simulator set to Norwegian Bokmål. At minimum, cover sign-in, verification, password recovery, account security, profile editing, and account deletion.
 6. Pin Tredco's Swift package dependency to the reviewed fork commit and rebuild the native app.
 
