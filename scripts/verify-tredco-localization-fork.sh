@@ -26,6 +26,9 @@ while IFS= read -r changed_path; do
     Sources/ClerkKit/Resources/Localizable.xcstrings | \
     Sources/ClerkKitUI/Resources/Localizable.xcstrings | \
     Sources/ClerkKitUI/Common/ClerkPhoneNumberField.swift | \
+    Sources/ClerkKitUI/Components/Auth/AuthStartPasskeySignInOperation.swift | \
+    Sources/ClerkKitUI/Components/Auth/AuthStartView.swift | \
+    Sources/ClerkKitUI/Components/Auth/ClerkAccessibilityIdentifiers.swift | \
     Sources/ClerkKitUI/Components/UserProfile/UserProfileDeleteAccountConfirmationView.swift | \
     Sources/ClerkKitUI/Components/UserProfile/UserProfileDeviceRow.swift | \
     Sources/ClerkKitUI/Components/UserProfile/UserProfilePasskeyRow.swift | \
@@ -35,7 +38,10 @@ while IFS= read -r changed_path; do
     Sources/ClerkKitUI/Extensions/Date+Ext.swift | \
     Sources/ClerkKitUI/Extensions/PhoneNumber+Ext.swift | \
     Tests/Localization/NorwegianStringCatalogTests.swift | \
-    Tests/UI/ClerkPhoneNumberFieldTests.swift)
+    Tests/UI/AuthStartPasskeySignInOperationTests.swift | \
+    Tests/UI/AutomaticPasskeyErrorPresentationTests.swift | \
+    Tests/UI/ClerkPhoneNumberFieldTests.swift | \
+    Tests/UI/PasskeySignInButtonVisibilityTests.swift)
       ;;
     *)
       unexpected_paths+=("$changed_path")
@@ -44,9 +50,9 @@ while IFS= read -r changed_path; do
 done < <(git -C "$repository_root" diff --name-only "$upstream_revision...HEAD")
 
 if (( ${#unexpected_paths[@]} > 0 )); then
-  printf 'Unexpected files in the Tredco localization fork:\n' >&2
+  printf 'Unexpected files in the Tredco Clerk fork:\n' >&2
   printf '  %s\n' "${unexpected_paths[@]}" >&2
   exit 1
 fi
 
-printf 'Tredco localization fork is scoped to approved paths from %s.\n' "$upstream_revision"
+printf 'Tredco Clerk fork is scoped to approved paths from %s.\n' "$upstream_revision"

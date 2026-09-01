@@ -28,6 +28,7 @@ struct AuthStartView: View {
   @State private var automaticPasskeySignInTaskGeneration = 0
   @State private var automaticPasskeySignInRestartID = 0
   @State private var automaticPasskeySignInHasStarted = false
+  @State private var interactivePasskeySignInOperation = AuthStartPasskeySignInOperation()
   @State private var biometricCredentialAvailability: BiometricCredentialAvailability?
   @State private var biometryDisplayName: BiometryDisplayName?
 
@@ -305,6 +306,9 @@ struct AuthStartView: View {
         authState.authStartPhoneNumberFieldIsActive = true
       }
     }
+    .onDisappear {
+      cancelInteractivePasskeySignIn()
+    }
     #if os(iOS) && !targetEnvironment(macCatalyst)
     .task(id: passkeySignInTaskID) {
       guard let passkeySignInTaskID else { return }
@@ -465,6 +469,7 @@ extension AuthStartView {
 
   private var identifierSwitcherButton: some View {
     Button {
+      cancelInteractivePasskeySignIn()
       cancelAutomaticPasskeySignIn()
       withAnimation(.default.speed(2)) {
         authState.authStartPhoneNumberFieldIsActive.toggle()
@@ -485,6 +490,7 @@ extension AuthStartView {
       BiometricSignInButton(
         biometryDisplayName: biometryDisplayName
       ) {
+        cancelInteractivePasskeySignIn()
         cancelAutomaticPasskeySignIn()
         await signInWithBiometrics()
       }
@@ -536,7 +542,7 @@ extension AuthStartView {
             transferable: authState.transferable,
             unsafeMetadata: authState.unsafeMetadata,
             showsTitle: showsTitle,
-            onStart: cancelAutomaticPasskeySignIn,
+            onStart: cancelPasskeySignInsForNewAuthOperation,
             onSuccess: handleTransferFlowResult,
             onError: { error in
               generalError = error
@@ -562,6 +568,7 @@ extension AuthStartView {
   }
 
   func startAuth() async {
+    cancelInteractivePasskeySignIn()
     cancelAutomaticPasskeySignIn()
     dismissKeyboard()
 
@@ -580,6 +587,15 @@ extension AuthStartView {
     automaticPasskeySignInTaskGeneration += 1
     automaticPasskeySignInTask?.cancel()
     automaticPasskeySignInTask = nil
+  }
+
+  private func cancelInteractivePasskeySignIn() {
+    interactivePasskeySignInOperation.cancel()
+  }
+
+  private func cancelPasskeySignInsForNewAuthOperation() {
+    cancelInteractivePasskeySignIn()
+    cancelAutomaticPasskeySignIn()
   }
 
   private func restartAutomaticPasskeySignInIfNeeded() {
@@ -622,11 +638,16 @@ extension AuthStartView {
     }
   }
 
-  private func createPasskeySignIn(presentsErrors: Bool = false) async -> SignIn? {
+  private func createPasskeySignIn(
+    presentsErrors: Bool = false,
+    operationToken: AuthStartPasskeySignInOperation.Token? = nil
+  ) async -> SignIn? {
     do {
       return try await clerk.auth.createPasskeySignIn()
     } catch {
-      if Task.isCancelled || error.isCancellationError { return nil }
+      if !passkeySignInOperationIsCurrent(operationToken) || error.isCancellationError {
+        return nil
+      }
       guard navigation.path.isEmpty else { return nil }
 
       if presentsErrors {
@@ -666,7 +687,8 @@ extension AuthStartView {
     signIn: SignIn,
     autofill: Bool,
     preferImmediatelyAvailableCredentials: Bool,
-    isUserInitiated: Bool = false
+    isUserInitiated: Bool = false,
+    operationToken: AuthStartPasskeySignInOperation.Token? = nil
   ) async -> PasskeySignInResult {
     do {
       let signIn = try await signIn.authenticateWithPasskeyWithFailureContext(
@@ -674,14 +696,16 @@ extension AuthStartView {
         preferImmediatelyAvailableCredentials: preferImmediatelyAvailableCredentials
       )
 
-      guard !Task.isCancelled else { return .stopped }
+      guard passkeySignInOperationIsCurrent(operationToken) else { return .stopped }
       generalError = nil
       guard navigation.path.isEmpty else { return .stopped }
       navigation.setToStepForStatus(signIn: signIn)
       return .completed
     } catch {
       let underlyingError = error.underlyingError
-      if Task.isCancelled || underlyingError.isCancellationError { return .stopped }
+      if !passkeySignInOperationIsCurrent(operationToken) || underlyingError.isCancellationError {
+        return .stopped
+      }
       if underlyingError.isUserCancelledError { return .continueWithAutofill }
       guard navigation.path.isEmpty else { return .stopped }
 
@@ -702,21 +726,41 @@ extension AuthStartView {
     cancelAutomaticPasskeySignIn()
     dismissKeyboard()
 
-    guard let signIn = await createPasskeySignIn(presentsErrors: true) else {
-      restartAutomaticPasskeySignInIfNeeded()
-      return
-    }
+    await interactivePasskeySignInOperation.run { operationToken in
+      guard interactivePasskeySignInOperation.isCurrent(operationToken) else { return }
 
-    let result = await authenticateWithPasskey(
-      signIn: signIn,
-      autofill: false,
-      preferImmediatelyAvailableCredentials: false,
-      isUserInitiated: true
-    )
-    guard case .completed = result else {
-      restartAutomaticPasskeySignInIfNeeded()
-      return
+      guard let signIn = await createPasskeySignIn(
+        presentsErrors: true,
+        operationToken: operationToken
+      ) else {
+        guard interactivePasskeySignInOperation.isCurrent(operationToken) else { return }
+        restartAutomaticPasskeySignInIfNeeded()
+        return
+      }
+
+      guard interactivePasskeySignInOperation.isCurrent(operationToken) else { return }
+
+      let result = await authenticateWithPasskey(
+        signIn: signIn,
+        autofill: false,
+        preferImmediatelyAvailableCredentials: false,
+        isUserInitiated: true,
+        operationToken: operationToken
+      )
+      guard interactivePasskeySignInOperation.isCurrent(operationToken) else { return }
+      guard case .completed = result else {
+        restartAutomaticPasskeySignInIfNeeded()
+        return
+      }
     }
+  }
+
+  private func passkeySignInOperationIsCurrent(
+    _ operationToken: AuthStartPasskeySignInOperation.Token?
+  ) -> Bool {
+    guard !Task.isCancelled else { return false }
+    guard let operationToken else { return true }
+    return interactivePasskeySignInOperation.isCurrent(operationToken)
   }
 
   #if os(iOS) && !targetEnvironment(macCatalyst)
