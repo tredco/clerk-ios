@@ -17,3 +17,16 @@ jobs:
       checks: write
       contents: read
     uses: ./.github/workflows/shared-checks.yml
+
+  tredco-localization:
+    if: startsWith(github.ref_name, 'tredco/nb-NO-')
+    name: Tredco localization guard
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Verify fork scope
+        run: ./scripts/verify-tredco-localization-fork.sh
+      - name: Verify Norwegian catalogs
+        run: swift test --filter NorwegianStringCatalogTests

@@ -8,6 +8,10 @@
 import ClerkKit
 import SwiftUI
 
+enum DeleteAccountConfirmationInput {
+  static let requiredValue = "DELETE"
+}
+
 struct UserProfileDeleteAccountConfirmationView: View {
   @Environment(Clerk.self) private var clerk
   @Environment(\.clerkTheme) private var theme
@@ -24,7 +28,7 @@ struct UserProfileDeleteAccountConfirmationView: View {
   }
 
   private var buttonIsDisabled: Bool {
-    deleteAccount != String(localized: "DELETE", bundle: .module)
+    deleteAccount != DeleteAccountConfirmationInput.requiredValue
   }
 
   var body: some View {

@@ -10,6 +10,7 @@ import SwiftUI
 
 struct OrganizationPersonalAccountRow<Accessory: View>: View {
   @Environment(\.clerkTheme) private var theme
+  @Environment(\.locale) private var locale
 
   let user: User
   let subtitle: Text?
@@ -63,7 +64,11 @@ struct OrganizationPersonalAccountRow<Accessory: View>: View {
   }
 
   private var title: String {
-    user.fullName ?? user.identifier ?? String(localized: "Personal account", bundle: .module)
+    user.fullName ?? user.identifier ?? String(
+      localized: "Personal account",
+      bundle: .module,
+      locale: locale
+    )
   }
 }
 

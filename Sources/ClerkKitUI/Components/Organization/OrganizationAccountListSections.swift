@@ -166,14 +166,16 @@ private struct OrganizationAccountMembershipRow: View {
 }
 
 private struct OrganizationAccountInvitationRow: View {
+  @Environment(\.locale) private var locale
+
   let invitation: UserOrganizationInvitation
   let accountList: OrganizationAccountListDataSource
   let onSelectOrganization: (String) -> Void
 
   private var roleName: String {
     switch invitation.role {
-    case "org:admin": String(localized: "Admin", bundle: .module)
-    case "org:member": String(localized: "Member", bundle: .module)
+    case "org:admin": String(localized: "Admin", bundle: .module, locale: locale)
+    case "org:member": String(localized: "Member", bundle: .module, locale: locale)
     default: invitation.role.replacingOccurrences(of: "org:", with: "").capitalized
     }
   }

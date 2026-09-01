@@ -1,3 +1,4 @@
+@testable import ClerkKitUI
 import Foundation
 import Testing
 
@@ -68,6 +69,7 @@ struct NorwegianStringCatalogTests {
     // required word can make the displayed instruction and validation differ.
     #expect(requiredWord == "DELETE")
     #expect(instruction?.contains("DELETE") == true)
+    #expect(DeleteAccountConfirmationInput.requiredValue == "DELETE")
   }
 
   private func loadCatalog(_ relativePath: String) throws -> Catalog {

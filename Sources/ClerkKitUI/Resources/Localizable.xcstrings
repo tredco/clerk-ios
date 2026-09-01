@@ -2939,7 +2939,7 @@
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Alternativt, hvis autentiseringsappen din støtter TOTP URI-er, kan du også kopiere hele URI-en."
+            "value" : "Alternativt, hvis autentiseringsappen din støtter TOTP-URI-er, kan du også kopiere hele URI-en."
           }
         },
         "pl" : {
@@ -13489,7 +13489,7 @@
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Hvis du har problemer med å fullføre oppsettet av kontoen, kan du sende oss en e-post. Vi hjelper deg så snart som mulig."
+            "value" : "Hvis du har problemer med å fullføre det obligatoriske kontooppsettet, kan du sende oss en e-post. Vi hjelper deg med å fullføre det så snart som mulig."
           }
         },
         "pl" : {
@@ -27118,7 +27118,7 @@
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Totrinnsbekreftelse er nå aktivert. Når du logger inn, må du skrive inn en bekreftelseskode fra autentiseringsappen.\n\nLagre reservekodene på et trygt sted. Hvis du mister tilgangen til autentiseringsenheten, kan du bruke en reservekode til å logge inn."
+            "value" : "Totrinnsbekreftelse er nå aktivert. Når du logger inn, må du skrive inn en bekreftelseskode fra denne autentiseringsappen som et ekstra trinn.\n\nLagre reservekodene på et trygt sted. Hvis du mister tilgangen til autentiseringsenheten, kan du bruke en reservekode til å logge inn."
           }
         },
         "pl" : {
@@ -31692,7 +31692,7 @@
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Når du logger inn, må du skrive inn en bekreftelseskode som sendes til dette telefonnummeret.\n\nLagre reservekodene på et trygt sted. Hvis du mister tilgangen til autentiseringsenheten, kan du bruke en reservekode til å logge inn."
+            "value" : "Når du logger inn, må du skrive inn en bekreftelseskode som sendes til dette telefonnummeret som et ekstra trinn.\n\nLagre reservekodene på et trygt sted. Hvis du mister tilgangen til autentiseringsenheten, kan du bruke en reservekode til å logge inn."
           }
         },
         "pl" : {
